@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"
+import { Redirect, useParams } from "react-router-dom"
 
-function MovieDetail() {
+function MovieDetail({admin}) {
     const [movie, setMovie] = useState(null);
     const { id } = useParams()
     
@@ -16,7 +16,12 @@ function MovieDetail() {
     
     const{ title, original_title, original_title_romanised, sysnopsis, poster, genres} = movie
     
-
+    function handleDeleteClick() {
+        fetch(`http://localhost:3001/movies/${id}`, {
+          method: "DELETE"
+        })        
+        window.location.replace("http://localhost:3000/movies#/movies")
+      }
     
     return (
         <section>
@@ -24,6 +29,20 @@ function MovieDetail() {
                 <h1>{title}</h1>
                 <p>{original_title}</p>
             </div>
+            {admin ? (
+            <div className="actions">
+                <button>
+                    <span role="img" aria-label="edit">
+                        ✏️
+                    </span>
+                </button>
+                <button onClick={handleDeleteClick}>
+                    <span role="img" aria-label="delete">
+                        🗑
+                    </span>
+                </button>
+            </div>
+            ) : null}
         </section>
     );
 }

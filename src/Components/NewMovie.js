@@ -8,6 +8,9 @@ function NewMovie() {
     const [poster, setPoster] = useState("");
     const [movieBanner, setMovieBanner] = useState("")
     const [synopsis, setSynopsis] = useState("");
+    const [genre1, setGenre1] = useState("")
+    const [genre2, setGenre2] = useState("")
+    const [releaseDate, setReleaseDate] = useState("")
     
     const history = useHistory();
     
@@ -20,6 +23,8 @@ function NewMovie() {
                 poster: poster,
                 movie_banner: movieBanner,
                 synopsis: synopsis,
+                genres: [genre1, genre2],
+                release_date: releaseDate
         }
         fetch("http://localhost:3001/movies", {
             method: "POST",
@@ -45,6 +50,9 @@ function NewMovie() {
                 <input type="text" id="poster" placeholder="Poster URL" value={poster} onChange={e => setPoster(e.target.value)} />
                 <input type="text" id="movieBanner" placeholder="Movie Banner URL" value={movieBanner} onChange={e => setMovieBanner(e.target.value)} />
                 <textarea id="synopsis" placeholder="Synopsis" value={synopsis} onChange={e => setSynopsis(e.target.value)} />
+                <input type="text" id="genre1" placeholder="First Genre" value={genre1} onChange={e => setGenre1(e.target.value)} />
+                <input type="text" id="genre2" placeholder="Second Genre" value={genre2} onChange={e => setGenre2(e.target.value)} />
+                <input type="text" id="releaseDate" placeholder="Release Date" value={releaseDate} onChange={e => setReleaseDate(e.target.value)} />
                 <button type="submit">Submit</button>
             </form>
         </section>
@@ -53,17 +61,11 @@ function NewMovie() {
 
 export default NewMovie
 
-// title
-// original_title
-// original_title_romanised
-// poster
-// movie_banner
-// synopsis
 // director
 // screenwriters
 // producers
 // music
-// genre
+// genres
 // rating
 // release_date
 // running_time
