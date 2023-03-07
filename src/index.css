@@ -4,8 +4,18 @@
 
 .app-header {
   text-align: center;
+  font-size: 1em;
+  margin-bottom: -2rem
+}
+
+.app-header h1{
   font-size: 3.2em;
-  margin: 1rem
+}
+
+.app-header h5{
+  align-items: flex-start;
+  position: relative;
+  top: -30px;
 }
 
 .background-image-logout {
@@ -30,9 +40,32 @@
   color: white;
 }
 
+.cards {
+  justify-content: left;
+  /* padding: 20px; */
+  margin: 30px;
+}
+
+.header {  
+  text-align: center;
+  font-size: 1em;
+  /* margin-bottom: -2rem; */
+
+  /* background-color: #7010ac; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  /* align-items: flex-start; */
+  position: relative;
+  /* top: -30px; */
+}
+
 .img-thumb {
   border: 1px solid #ddd; /* Gray border */
-  border-radius: 4px;  /* Rounded border */
+  border-radius: 10px;  /* Rounded border */
   padding: 5px; /* Some padding */
   width: 150px; /* Set a small width */
 }
@@ -44,23 +77,25 @@
 
 .login {
   float: right;
-  margin: 1rem;
+  margin: .25rem;
   padding: 0.25rem;
   text-decoration: none;
-  font-size: 1.2em;
+  border-radius: 15px;
+  font-size: 1.5em;
   color: firebrick;
-  border-bottom: 2px solid firebrick;
+  /* border-bottom: 2px solid firebrick; */
   transition: 0.1s;
 }
 
-.header {
-  background-color: #7010ac;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.movie-item {
+  margin: 1%;
+}
+
+.movie-list {
+  border: 5px solid #ca5b5b; /* Gray border */
+  border-radius: 30px;  /* Rounded border */
+  padding: 20px; /* Some padding */
+  width: flex; /* Set a small width */
 }
 
 nav {
@@ -69,8 +104,8 @@ nav {
 
 nav a {
   display: inline-block;
-  margin: 1rem;
-  padding: 0.25rem;
+  margin: .2rem;
+  padding: 0.5rem;
   text-decoration: none;
   font-size: 1.2em;
   color: firebrick;
@@ -90,7 +125,9 @@ nav a.active {
 }
 
 .search {
-    float: left;
+  display: inline-flex;
+    /* float: left; */
+    justify-content: space-around;
     margin: 1rem;
     padding: 0.25rem;
     text-decoration: none;
@@ -98,6 +135,7 @@ nav a.active {
     color: firebrick;
     border-bottom: 2px solid firebrick;
     transition: 0.1s;
+    width: 100%;
 }
 
 

@@ -9,19 +9,22 @@ import NewMovie from "./NewMovie";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
-  const [search, setSearch] = useState("")
+
 
   return (
     <div className={loggedIn ? "background-image-login" : "background-image-logout"}>
-     <header className="app-header"> Great Ghibli Bibli</header>
+     <header className="app-header"> 
+     <h1>Great Ghibli Bibli</h1>
+     <h5>Ie: The Great Ghibli Bible</h5>
+     </header>
       {/* {loggedIn ? <MoviePage/> : <LandingPage />} */}
-      <NavBar loggedIn={loggedIn} onLoggedIn={setLoggedIn} search={search} onSearchChange={setSearch}/>
+      <NavBar loggedIn={loggedIn} onLoggedIn={setLoggedIn} />
       {loggedIn ? <Switch>
                 <Route path="/about">
                     <About />
                 </Route>
                 <Route exact path="/movies">
-                    <MovieList search={search}/>
+                    <MovieList />
                 </Route>
                 <Route path="/movies/new">
                     <NewMovie />
