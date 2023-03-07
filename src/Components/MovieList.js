@@ -25,9 +25,6 @@ function MovieList() {
    })
 
     // handle my filter    
-    
-    // const allGenres = movies.map((movie)=> movie.genre)
-    // const uniqueGenres = [...new Set(allGenres)]
     const genres = movies.map((movie)=> movie.genres)
     const allGenres = genres.flat(1)
     const uniqueGenres = [...new Set(allGenres)]
