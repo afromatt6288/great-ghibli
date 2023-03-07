@@ -24,19 +24,14 @@ function MovieList() {
     }
    })
 
-    // handle my filter
-    
-    
+    // handle my filter    
     
     // const allGenres = movies.map((movie)=> movie.genre)
     // const uniqueGenres = [...new Set(allGenres)]
-    
-    
-    const genres = movies.map((movie)=> movie.genres.map ((genre) => genre))
-    const allGenres = genres.map((genre)=> [...genres, genre])
-    console.log(genres)
-    console.log(allGenres)
-    const filteredMovies = sortedMovies.filter((movie)=> filterBy === "All" ? sortedMovies : movie.genres === filterBy )
+    const genres = movies.map((movie)=> movie.genres)
+    const allGenres = genres.flat(1)
+    const uniqueGenres = [...new Set(allGenres)]
+    const filteredMovies = sortedMovies.filter((movie)=> filterBy === "All" ? sortedMovies : movie.genres[0] === filterBy || movie.genres[1] === filterBy )
 
     // this is how I am handling the Search function
     const displayedMovies = filteredMovies.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase()))
@@ -45,7 +40,7 @@ function MovieList() {
         <section id="movies">
             <h2 className="header">Ghibli Movies</h2>
             <div className="search-bar">
-                <Search search={search} onSearchChange={setSearch} sortBy={sortBy} onSortChange={setSortBy} filterBy={filterBy} onHandleFilter={setFilterBy} genres={genres}/>
+                <Search search={search} onSearchChange={setSearch} sortBy={sortBy} onSortChange={setSortBy} filterBy={filterBy} onHandleFilter={setFilterBy} genres={uniqueGenres}/>
             </div>
             <div>
             <div className="movie-list">
