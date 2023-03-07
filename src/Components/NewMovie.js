@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-const technologyList = ["React", "Redux", "Rails", "JavaScript"];
-
 function NewMovie() {
     const [title, setTitle] = useState("");
     const [originalTitle, setOriginalTitle] = useState("");
@@ -23,7 +21,7 @@ function NewMovie() {
                 movie_banner: movieBanner,
                 synopsis: synopsis,
         }
-        fetch("/projects", {
+        fetch("http://localhost:3001/movies", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -32,7 +30,6 @@ function NewMovie() {
         })
             .then(r => r.json())
             .then(data => {
-                // redirect /projects/:id
                 history.push(`/movies/${data.id}`)
             })
     }

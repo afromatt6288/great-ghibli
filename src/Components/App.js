@@ -5,6 +5,7 @@ import Home from "./Home";
 import About from "./About";
 import MovieList from "./MovieList";
 import MovieDetail from "./MovieDetail";
+import Merch from "./Merch"
 import NewMovie from "./NewMovie";
 
 function App() {
@@ -20,20 +21,23 @@ function App() {
       {/* {loggedIn ? <MoviePage/> : <LandingPage />} */}
       <NavBar loggedIn={loggedIn} onLoggedIn={setLoggedIn} />
       {loggedIn ? <Switch>
-                <Route path="/about">
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route exact path="/about">
                     <About />
                 </Route>
                 <Route exact path="/movies">
                     <MovieList />
                 </Route>
-                <Route path="/movies/new">
+                <Route exact path="/movies/new">
                     <NewMovie />
                 </Route>
-                <Route path="/movies/:id">
+                <Route exact path="/movies/:id">
                     <MovieDetail />
                 </Route>
-                <Route exact path="/">
-                    <Home />
+                <Route exact path="/merch">
+                    <Merch />
                 </Route>
                 <Route path="*">
                     <h1>404 not found</h1>
