@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { useHistory } from "react-router-dom"
 import NewUser from "./NewUser"
 
-function Login ({toggle, loggedIn, onLoggedIn, admin, onAdmin, currentUser, onCurrentUser, users}) {
+function Login ({toggle, loggedIn, onLoggedIn, admin, onAdmin, currentUser, onCurrentUser, users, onAddUser}) {
     const [userName, setUserName] = useState("")
     const [password, setPassword] = useState("")
     const [isPasswordSecure, setIsPasswordSecure] = useState(true)
@@ -24,6 +24,11 @@ function Login ({toggle, loggedIn, onLoggedIn, admin, onAdmin, currentUser, onCu
         }
     }
 
+    function handleNewUser(addUser){
+        onAddUser(addUser)
+        setNewUser(!newUser)
+    }
+
   return (
    <div className="modal">
         <div className="modal_content">
@@ -33,7 +38,7 @@ function Login ({toggle, loggedIn, onLoggedIn, admin, onAdmin, currentUser, onCu
                 <label> Admin </label>
                 <input label="Admin" type="checkbox" readOnly checked={admin} />
             </div>
-            : newUser ? <NewUser onNewUser={e=>setNewUser(!newUser)} toggle={toggle}/> :
+            : newUser ? <NewUser onNewUser={handleNewUser} toggle={toggle}/> :
             <form onSubmit={handleSubmit}>
                 <input type="text" id="userName" placeholder="User Name" value={userName} onChange={e => setUserName(e.target.value) }/>
                 <input type={isPasswordSecure? "password" : "text"} id="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)}/>

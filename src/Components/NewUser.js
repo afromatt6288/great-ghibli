@@ -23,6 +23,7 @@ function NewUser({onNewUser, toggle}) {
         })
             .then(r => r.json())
             .then(data => {
+                onNewUser(data)
                 history.push(`/`)
             })
             toggle()

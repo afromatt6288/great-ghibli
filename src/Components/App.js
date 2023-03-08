@@ -8,7 +8,7 @@ import MovieDetail from "./MovieDetail";
 import Merch from "./Merch"
 import NewMovie from "./NewMovie";
 import Login from "./Login"
-import EditUsers from "./EditUsers"
+import Users from "./Users"
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
@@ -23,6 +23,16 @@ function App() {
         .then(data => setUsers(data))
     }, [])
 
+    function handleAddUser(addUser) {
+        const updatedUsers = [...users, addUser]
+        setUsers(updatedUsers);
+      }
+
+    function handleUserDelete(id) {
+        const updatedUsers = users.filter(user => user.id !== id)
+        setUsers(updatedUsers)
+    }
+
   function togglePop () {
     setSeen(!seen);
    };
@@ -34,7 +44,7 @@ function App() {
         <h5>Ie: The Great Ghibli Bible</h5>
         <div>
             <button className="login" onClick={togglePop} >{loggedIn ? "Profile" : "Log In"}</button>
-            {seen ? <Login toggle={togglePop} loggedIn={loggedIn} onLoggedIn={setLoggedIn} admin={admin} currentUser={currentUser} onCurrentUser={setCurrentUser} users={users}/> : null}
+            {seen ? <Login toggle={togglePop} loggedIn={loggedIn} onLoggedIn={setLoggedIn} admin={admin} currentUser={currentUser} onCurrentUser={setCurrentUser} users={users} onAddUser={handleAddUser}/> : null}
         </div>
         </header>
         {loggedIn ? <NavBar admin={admin} /> : seen ? null : <h2 className="please">Please Log In</h2>}
@@ -53,8 +63,8 @@ function App() {
                 <NewMovie />
             </Route> : null }
             {admin ? 
-            <Route exact path="/editUsers">
-                <EditUsers />
+            <Route exact path="/users">
+                <Users users={users} onUserDelete={handleUserDelete}/>
             </Route> : null }
             <Route exact path="/movies/:id">
                 <MovieDetail admin={admin}/>

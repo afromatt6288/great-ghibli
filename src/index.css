@@ -232,6 +232,9 @@ nav a.active {
   text-align: center;
 }
 
+.users {
+  display: flex;
+}
 
 body {
   margin: 0;
