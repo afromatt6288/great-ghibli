@@ -15,6 +15,7 @@ function MovieDetail({admin}) {
     if (!movie) return <h2>Loading...</h2>
     
     const { title, original_title, original_title_romanised, synopsis, poster, genres} = movie
+    const [genre1, genre2] = genres
     
     function handleDeleteClick() {
         fetch(`http://localhost:3001/movies/${id}`, {
@@ -27,7 +28,7 @@ function MovieDetail({admin}) {
         <section>
             <div className="detail-intro">
                 <h2>{title} / {original_title} / {original_title_romanised}</h2>
-                <p>{genres}</p>
+                <p>{genre1} / {genre2}</p>
                 <p>{synopsis}</p>
             </div>
             <div className="detail-image-container">

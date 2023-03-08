@@ -50,10 +50,10 @@ function App() {
             {loggedIn ? <NavBar admin={admin} /> : seen ? null : <h2 className="please">Please Log In</h2>}
             {loggedIn ? <Switch>
                 <Route exact path="/">
-                 <Home />
+                    <Home />
                 </Route>
                 <Route exact path="/about">
-                <About />
+                    <About />
                 </Route>
                 <Route exact path="/movies">
                     <MovieList />

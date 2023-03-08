@@ -127,6 +127,13 @@
           "lastEnglishDubbingActor": "Matt K. Miller",
           "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/1d/Castle_in_the_Sky_010.jpg/revision/latest/scale-to-width-down/350?cb=20200516011450"
         }
+      ],
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
+      ],
+      "locations": ["https://ghibliapi.herokuapp.com/locations/"],
+      "vehicles": [
+        "https://ghibliapi.herokuapp.com/vehicles/4e09b023-f650-4747-9ab9-eacf14540cfb"
       ]
     },
     {
@@ -162,7 +169,7 @@
         "rottenTomatoes": "100%",
         "imdb": "8.5/10"
       },
-      "character": [
+      "characters": [
         {
           "name": "Seita Yokokawa",
           "originalCast": "Tsutomu Tatsumi",
@@ -217,7 +224,12 @@
           "lastEnglishDubbingActor": "Andrew Love",
           "still": ""
         }
-      ]
+      ],
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
+      ],
+      "locations": ["https://ghibliapi.herokuapp.com/locations/"],
+      "vehicles": ["https://ghibliapi.herokuapp.com/vehicles/"]
     },
     {
       "id": 3,
@@ -255,7 +267,7 @@
         "rottenTomatoes": "95%",
         "imdb": "8.1/10"
       },
-      "character": [
+      "characters": [
         {
           "name": "Satsuki Kusakabe",
           "originalCast": "Noriko Hidaka",
@@ -370,63 +382,233 @@
           "lastEnglishDubbingActor": "Newell Alexander",
           "still": ""
         }
-      ]
+      ],
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+        "https://ghibliapi.herokuapp.com/species/603428ba-8a86-4b0b-a9f1-65df6abef3d3",
+        "https://ghibliapi.herokuapp.com/species/74b7f547-1577-4430-806c-c358c8b6bcf5"
+      ],
+      "locations": ["https://ghibliapi.herokuapp.com/locations/"],
+      "vehicles": ["https://ghibliapi.herokuapp.com/vehicles/"]
     },
     {
-      "title": "Nausicaa",
-      "original_title": "",
-      "original_title_romanised": "",
-      "poster": "",
-      "movie_banner": "",
-      "synopsis": "Stuff Hppesn",
-      "genres": [
-        "Stuff",
-        "Things"
+      "id": 4,
+      "title": "Kiki's Delivery Service",
+      "original_title": "魔女の宅急便",
+      "original_title_romanised": "Majo no takkyūbin",
+      "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/7nO5DUMnGUuXrA4r2h6ESOKQRrx.jpg",
+      "movie_banner": "https://image.tmdb.org/t/p/original/h5pAEVma835u8xoE60kmLVopLct.jpg",
+      "synopsis":"From the legendary Hayao Miyazaki comes the beloved story of a resourceful young witch who uses her broom to create a delivery service, only to lose her gift of flight in a moment of self-doubt.",
+	    "director":"Hayao Miyazaki",
+	    "screenwriters":["Hayao Miyazaki"],
+	    "producers":["Hayao Miyazaki"],
+	    "music":"Joe Hisaishi",
+	    "genres": [
+        "Adventure",
+		    "Family"
+	    ],
+      "release_date": "July 29, 1989",
+      "running_time": "102",
+	    "rating":"G",
+	    "budgetUSD":"6,900,000",
+	    "boxOfficeUSD":"41,800,800",
+	    "awards":[
+        "12th Anime Grand Prix; Best Anime, Best Female Character, Best Anime Theme Song",
+        "44th Mainichi Film Award; \tBest Animated Film",
+        "Kinema Junpo Awards; Readers' Choice Award",
+        "13th Japan Academy Prize; Special Award, Popularity Award",
+        "7th Annual Golden Gross Award; Gold, Japanese Film",
+        "The Movie's Day; Special Achievement Award",
+        "The Erandole Award; Special Award",
+        "Japan Cinema Association Award; Best Film, Best Director",
+        "Agency of Cultural Affairs; Best Film",
+        "Tokyo Metropolitan Cultural Honor; Best Film",
+        "7th Annual Money Making Director's Award; Best Director"
       ],
-      "release_date": "June 30, 1984",
-      "id": 4
-    },
-    {
-      "title": "c",
-      "original_title": "",
-      "original_title_romanised": "",
-      "poster": "",
-      "movie_banner": "",
-      "synopsis": "",
-      "genres": [
-        "",
-        ""
+	    "reviews":{
+		    "rottenTomatoes":"98%",
+		    "imdb":"7.8/10"
+	    },
+      "character":[
+		    {
+          "name":"Kiki",
+          "originalCast":"Minami Takayama",
+          "lastEnglishDubbingActor":"Kirsten Dunst",
+          "still":""
+        },
+		    {
+          "name":"Jiji",
+          "originalCast":"Rei Sakuma",
+          "lastEnglishDubbingActor":"Phil Hartman",
+          "still":""},
+		    {
+          "name":"Osono",
+          "originalCast":"Keiko Toda",
+          "lastEnglishDubbingActor":"Tress MacNeille",
+          "still":""
+        },
+		    {
+          "name":"Ursula",
+          "originalCast":"Minami Takayama",
+          "lastEnglishDubbingActor":"Janeane Garofalo",
+          "still":""
+        },
+		    {
+          "name":"Tombo",
+          "originalCast":"Kappei Yamaguchi",
+          "lastEnglishDubbingActor":"Matthew Lawrence",
+          "still":""
+        },
+		    {
+          "name":"Fukuo",
+          "originalCast":"Kōichi Yamadera",
+          "lastEnglishDubbingActor":"Brian Cummings",
+          "still":""},
+		    {
+          "name":"Kokiri (Kiki's mother)",
+          "originalCast":"Mieko Nobusawa",
+          "lastEnglishDubbingActor":"Kath Soucie",
+          "still":""
+        },
+		    {
+          "name":"Okino (Kiki's father)",
+          "originalCast":"Kōichi Miura",
+          "lastEnglishDubbingActor":"Jeff Bennett",
+          "still":""
+        },
+		    {
+          "name":"Madame",
+          "originalCast":"Haruko Kato",
+          "lastEnglishDubbingActor":"Debbie Reynolds",
+          "still":""
+        },
+		    {
+          "name":"Barsa",
+          "originalCast":"Hiroko Seki",
+          "lastEnglishDubbingActor":"Edie McClurg",
+          "still":""
+        },
+		    {
+          "name":"Senior Witch",
+          "originalCast":"Yūko Kobayashi",
+          "lastEnglishDubbingActor":"Debi Derryberry",
+          "still":""
+        },
+		    {
+          "name":"Madame's Granddaughter",
+          "originalCast":"Keiko Kagimoto",
+          "lastEnglishDubbingActor":"Sherry Lynn",
+          "still":""
+        },
+		    {
+          "name":"Ket",
+          "originalCast":"Yuriko Fuchizaki",
+          "lastEnglishDubbingActor":"Pamela Segall",
+          "still":""
+        },
+		    {
+          "name":"Maki (Ket's aunt)",
+          "originalCast":"Kikuko Inoue",
+          "lastEnglishDubbingActor":"Julia Fletcher",
+          "still":""
+        },
+		    {
+          "name":"Ket's mother",
+          "originalCast":"Mika Doi",
+          "lastEnglishDubbingActor":"Julia Fletcher",
+          "still":""
+        },
+		    {
+          "name":"Ket's father",
+          "originalCast":"Takaya Hashi",
+          "lastEnglishDubbingActor":"John DeMita",
+          "still":""
+        },
+		    {
+          "name":"Ket's grandmother",
+          "originalCast":"Yoshiko Asai",
+          "lastEnglishDubbingActor":"Julia Fletcher",
+          "still":""
+        },
+		    {
+          "name":"Miss Dora",
+          "originalCast":"Shō Saito",
+          "lastEnglishDubbingActor":"Fay Dewitt",
+          "still":""
+        },
+		    {
+          "name":"Truck Driver",
+          "originalCast":"Michihiro Ikemizu",
+          "lastEnglishDubbingActor":"N/A",
+          "still":""
+        },
+		    {
+          "name":"Hotel Receptionist",
+          "originalCast":"Shinpachi Tsuji",
+          "lastEnglishDubbingActor":"Matt K. Miller",
+          "still":""
+        },
+		    {
+          "name":"Policeman",
+          "originalCast":"Kōichi Yamadera",
+          "lastEnglishDubbingActor":"Matt K. Miller",
+          "still":""
+        },
+		    {
+          "name":"Radio Announcer",
+          "originalCast":"Kōichi Yamadera",
+          "lastEnglishDubbingActor":"Corey Burton",
+          "still":""
+        },
+		    {
+          "name":"Man with Push Broom",
+          "originalCast":"Takashi Taguchi",
+          "lastEnglishDubbingActor":"Jeff Bennett",
+          "still":""
+        },
+		    {
+          "name":"Dirigible Captain",
+          "originalCast":"Akio Ōtsuka",
+          "lastEnglishDubbingActor":"John Hostetter",
+          "still":""
+        },
+		    {
+          "name":"Clock Tower Caretaker",
+          "originalCast":"Tomomichi Nishimura",
+          "lastEnglishDubbingActor":"Lewis Arquette",
+          "still":""
+        },
+		    {
+          "name":"Baby",
+          "originalCast":"Chika Sakamoto",
+          "lastEnglishDubbingActor":"N/A",
+          "still":""
+        },
+		    {
+          "name":"Friends",
+          "originalCast":["Yūko Tsuga","Yoshiko Kamei"],
+          "lastEnglishDubbingActor":["Lara Cody","Barbara Goodson"],
+          "still":""
+        },
+		    {
+          "name":"Old Lady",
+          "originalCast":"Hiroko Maruyama",
+          "lastEnglishDubbingActor":"Melanie MacQueen",
+          "still":""
+        },
+		    {
+          "name":"Boy",
+          "originalCast":"Hiroko Maruyama",
+          "lastEnglishDubbingActor":"Unknown",
+          "still":""
+        }
+	    ],
+      "species": [
+        "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+        "https://ghibliapi.herokuapp.com/species/603428ba-8a86-4b0b-a9f1-65df6abef3d3"
       ],
-      "release_date": "March 21, 2023",
-      "id": 8
-    },
-    {
-      "title": "d",
-      "original_title": "",
-      "original_title_romanised": "",
-      "poster": "",
-      "movie_banner": "",
-      "synopsis": "",
-      "genres": [
-        "",
-        ""
-      ],
-      "release_date": "February 15, 2023",
-      "id": 9
-    },
-    {
-      "title": "L",
-      "original_title": "",
-      "original_title_romanised": "",
-      "poster": "",
-      "movie_banner": "",
-      "synopsis": "",
-      "genres": [
-        "",
-        ""
-      ],
-      "release_date": "December 11, 2022",
-      "id": 10
+      "locations": ["https://ghibliapi.herokuapp.com/locations/"],
+      "vehicles": ["https://ghibliapi.herokuapp.com/vehicles/"]
     }
   ],
   "users": [

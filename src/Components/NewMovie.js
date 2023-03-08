@@ -43,18 +43,19 @@ function NewMovie() {
     
 
     return (
-        <section id="form">
+        <section >
             <h3 className="header">Add New Movie</h3>
-            <form onSubmit={handleSubmit}>
+            <form className="new-movie-form" onSubmit={handleSubmit}>
                 <input type="text" id="title" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} />
                 <input type="text" id="originalTitle" placeholder="Original Title" value={originalTitle} onChange={e => setOriginalTitle(e.target.value)} />
                 <input type="text" id="originalTitleRomanised" placeholder="Original Title Romanised" value={originalTitleRomanised} onChange={e => setOriginalTitleRomanised(e.target.value)} />
-                <input type="text" id="poster" placeholder="Poster URL" value={poster} onChange={e => setPoster(e.target.value)} />
-                <input type="text" id="movieBanner" placeholder="Movie Banner URL" value={movieBanner} onChange={e => setMovieBanner(e.target.value)} />
-                <textarea id="synopsis" placeholder="Synopsis" value={synopsis} onChange={e => setSynopsis(e.target.value)} />
                 <input type="text" id="genre1" placeholder="First Genre" value={genre1} onChange={e => setGenre1(e.target.value)} />
                 <input type="text" id="genre2" placeholder="Second Genre" value={genre2} onChange={e => setGenre2(e.target.value)} />
-                <input type="date" id="releaseDate" placeholder="Release Date" value={releaseDate} onChange={e => setReleaseDate(e.target.value)} />
+                <input type="text" id="poster" placeholder="Poster URL" value={poster} onChange={e => setPoster(e.target.value)} />
+                <input type="text" id="movieBanner" placeholder="Movie Banner URL" value={movieBanner} onChange={e => setMovieBanner(e.target.value)} />
+                <label>Release Date<input type="date" id="releaseDate" placeholder="Release Date" value={releaseDate} onChange={e => setReleaseDate(e.target.value)} /></label>
+                <textarea id="synopsis" placeholder="Synopsis" value={synopsis} onChange={e => setSynopsis(e.target.value)} />
+                <br/>
                 <button type="submit">Submit</button>
             </form>
         </section>

@@ -24,6 +24,7 @@ function MovieList() {
             const dateB = new Date(movie2.release_date);
             return dateA.getTime() - dateB.getTime();
         }
+        return console.log('error on sort')
     })
 
     // handle my filter    
@@ -43,11 +44,11 @@ function MovieList() {
             </div>
             <div>
             <div className="movie-list">
-            <Card.Group className="cards" itemsPerRow={6}>
-                {displayedMovies.map((movie)=> (
-                <MovieItem key={movie.id} movie={movie} />
-                ))}
-            </Card.Group>
+                <Card.Group className="cards" itemsPerRow={6}>
+                    {displayedMovies.map((movie)=> (
+                    <MovieItem key={movie.id} movie={movie} />
+                    ))}
+                </Card.Group>
             </div>
             </div>
         </section>
