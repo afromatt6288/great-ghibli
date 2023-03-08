@@ -1,21 +1,15 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import { useHistory } from "react-router-dom"
 import NewUser from "./NewUser"
 
-function Login ({toggle, loggedIn, onLoggedIn, admin, onAdmin, currentUser, onCurrentUser}) {
-    const history = useHistory()
-    const [users, setUsers] = useState([])    
+function Login ({toggle, loggedIn, onLoggedIn, admin, onAdmin, currentUser, onCurrentUser, users}) {
     const [userName, setUserName] = useState("")
     const [password, setPassword] = useState("")
     const [isPasswordSecure, setIsPasswordSecure] = useState(true)
     const [invalidUser, setInvalidUser] = useState(false)
     const [newUser, setNewUser] = useState(false)
-
-    useEffect(() => {
-        fetch("http://localhost:3001/users")
-            .then(r => r.json())
-            .then(data => setUsers(data))
-    }, [])
+    
+    const history = useHistory()
     const validUser = users.find((user)=> user.username === userName && user.password === password)
 
     function handleSubmit(e){

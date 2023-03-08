@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Switch, Route } from "react-router-dom";
 import NavBar from "./NavBar"
 import Home from "./Home";
@@ -13,8 +13,15 @@ import EditUsers from "./EditUsers"
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
   const [seen, setSeen] = useState(false)
-  const [currentUser, setCurrentUser] = useState([])
+  const [currentUser, setCurrentUser] = useState([])  
+  const [users, setUsers] = useState([]) 
   const admin = currentUser.admin
+
+  useEffect(() => {
+    fetch("http://localhost:3001/users")
+        .then(r => r.json())
+        .then(data => setUsers(data))
+    }, [])
 
   function togglePop () {
     setSeen(!seen);
@@ -27,7 +34,7 @@ function App() {
         <h5>Ie: The Great Ghibli Bible</h5>
         <div>
             <button className="login" onClick={togglePop} >{loggedIn ? "Profile" : "Log In"}</button>
-            {seen ? <Login toggle={togglePop} loggedIn={loggedIn} onLoggedIn={setLoggedIn} admin={admin} currentUser={currentUser} onCurrentUser={setCurrentUser}/> : null}
+            {seen ? <Login toggle={togglePop} loggedIn={loggedIn} onLoggedIn={setLoggedIn} admin={admin} currentUser={currentUser} onCurrentUser={setCurrentUser} users={users}/> : null}
         </div>
         </header>
         {loggedIn ? <NavBar admin={admin} /> : seen ? null : <h2 className="please">Please Log In</h2>}
