@@ -16,6 +16,8 @@ function NewMovie() {
     
     function handleSubmit(e) {
         e.preventDefault()
+        const date = new Date(releaseDate)             
+        const formattedDate = date.toLocaleDateString('en-US', {month: 'long', day: 'numeric', year: 'numeric', })
         const formData = {
                 title: title,
                 original_title: originalTitle,
@@ -24,7 +26,7 @@ function NewMovie() {
                 movie_banner: movieBanner,
                 synopsis: synopsis,
                 genres: [genre1, genre2],
-                release_date: releaseDate
+                release_date: formattedDate,
         }
         fetch("http://localhost:3001/movies", {
             method: "POST",
@@ -52,7 +54,7 @@ function NewMovie() {
                 <textarea id="synopsis" placeholder="Synopsis" value={synopsis} onChange={e => setSynopsis(e.target.value)} />
                 <input type="text" id="genre1" placeholder="First Genre" value={genre1} onChange={e => setGenre1(e.target.value)} />
                 <input type="text" id="genre2" placeholder="Second Genre" value={genre2} onChange={e => setGenre2(e.target.value)} />
-                <input type="text" id="releaseDate" placeholder="Release Date" value={releaseDate} onChange={e => setReleaseDate(e.target.value)} />
+                <input type="date" id="releaseDate" placeholder="Release Date" value={releaseDate} onChange={e => setReleaseDate(e.target.value)} />
                 <button type="submit">Submit</button>
             </form>
         </section>

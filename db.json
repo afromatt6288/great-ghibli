@@ -378,13 +378,41 @@
       "original_title_romanised": "",
       "poster": "",
       "movie_banner": "",
+      "synopsis": "Stuff Hppesn",
+      "genres": [
+        "Stuff",
+        "Things"
+      ],
+      "release_date": "June 30, 1984",
+      "id": 4
+    },
+    {
+      "title": "c",
+      "original_title": "",
+      "original_title_romanised": "",
+      "poster": "",
+      "movie_banner": "",
       "synopsis": "",
       "genres": [
         "",
         ""
       ],
-      "release_date": "",
-      "id": 4
+      "release_date": "March 21, 2023",
+      "id": 8
+    },
+    {
+      "title": "d",
+      "original_title": "",
+      "original_title_romanised": "",
+      "poster": "",
+      "movie_banner": "",
+      "synopsis": "",
+      "genres": [
+        "",
+        ""
+      ],
+      "release_date": "February 15, 2023",
+      "id": 9
     }
   ],
   "users": [

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"
+import { useParams, useHistory } from "react-router-dom"
 
 function MovieDetail({admin}) {
     const [movie, setMovie] = useState(null);
     const { id } = useParams()
+    const history = useHistory()
     
     useEffect(() => {
         fetch(`http://localhost:3001/movies/${id}`)
@@ -14,21 +15,27 @@ function MovieDetail({admin}) {
     
     if (!movie) return <h2>Loading...</h2>
     
-    const { title, original_title, original_title_romanised, sysnopsis, poster, genres} = movie
+    const { title, original_title, original_title_romanised, synopsis, poster, genres} = movie
     
     function handleDeleteClick() {
         fetch(`http://localhost:3001/movies/${id}`, {
           method: "DELETE"
-        })        
-        window.location.replace("http://localhost:3000/movies#/movies")
+        }) 
+        history.push(`/movies`)       
       }
     
     return (
         <section>
-            <div className="movie-item">
-                <h1>{title}</h1>
-                <p>{original_title}</p>
+            <div className="detail-intro">
+                <h2>{title} / {original_title} / {original_title_romanised}</h2>
+                <p>{genres}</p>
+                <p>{synopsis}</p>
             </div>
+            <div className="detail-image-container">
+                <img className="detail-image" src={poster} alt={title}/>
+            </div>
+
+
             {admin ? (
             <div className="actions">
                 <button>
