@@ -8,14 +8,11 @@ import MovieDetail from "./MovieDetail";
 import Merch from "./Merch"
 import NewMovie from "./NewMovie";
 import Login from "./Login"
-import NewUser from "./NewUser"
 import EditUsers from "./EditUsers"
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
-//   const [admin, setAdmin] = useState(false)
   const [seen, setSeen] = useState(false)
-  //   const [profileName, setProfileName] = useState("")
   const [currentUser, setCurrentUser] = useState([])
   const admin = currentUser.admin
 
@@ -32,13 +29,11 @@ function App() {
         <h1>Great Ghibli Bibli</h1>
         <h5>Ie: The Great Ghibli Bible</h5>
         <div>
-            <button className="login" onClick={togglePop}>{loggedIn ? "Profile" : "Log In"}</button>
-            {seen ? <Login toggle={togglePop} loggedIn={loggedIn} onLoggedIn={setLoggedIn} admin={admin} 
-            // onAdmin={setAdmin} 
-            currentUser={currentUser} onCurrentUser={setCurrentUser}/> : null}
+            <button className="login" onClick={togglePop} >{loggedIn ? "Profile" : "Log In"}</button>
+            {seen ? <Login toggle={togglePop} loggedIn={loggedIn} onLoggedIn={setLoggedIn} admin={admin} currentUser={currentUser} onCurrentUser={setCurrentUser}/> : null}
         </div>
         </header>
-        {loggedIn ? <NavBar admin={admin} /> : <h2>Please Log In</h2>}
+        {loggedIn ? <NavBar admin={admin} /> : seen ? null : <h2 className="please">Please Log In</h2>}
         {loggedIn ? <Switch>
             <Route exact path="/">
                 <Home />
@@ -66,11 +61,8 @@ function App() {
             <Route path="*">
                 <h1>404 not found</h1>
             </Route>
-        </Switch> : <Switch>
-            <Route exact path="/newUser">
-                <NewUser />
-            </Route>
-        </Switch> }
+        </Switch> : null
+        }
     </div>
   );
 }

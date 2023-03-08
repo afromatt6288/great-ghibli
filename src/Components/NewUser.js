@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-function NewUser() {
+function NewUser({onNewUser, toggle}) {
     const [userName, setUserName] = useState("");
     const [password, setPassword] = useState("");
     
@@ -10,7 +10,7 @@ function NewUser() {
     function handleSubmit(e) {
         e.preventDefault()
         const formData = {
-                name: userName,
+                username: userName,
                 password: password,
                 admin: false
         }
@@ -25,16 +25,19 @@ function NewUser() {
             .then(data => {
                 history.push(`/`)
             })
-    }
-    
+            toggle()
+    }    
 
     return (
         <section id="form">
-            <h3 className="header">Add New Movie</h3>
-            <form onSubmit={handleSubmit}>
-                <input type="text" id="userName" placeholder="Name" value={userName} onChange={e => setUserName(e.target.value)} />
-                <input type="text" id="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
-                <button type="submit">Submit</button>
+            <form className="user-signup" onSubmit={handleSubmit}>
+                <p> Welcome New User <br/> Create Account Below!</p>
+                <input type="text" id="userName" placeholder="Set User Name" value={userName} onChange={e => setUserName(e.target.value)} />
+                <br/>
+                <input type="text" id="password" placeholder="Set Password" value={password} onChange={e => setPassword(e.target.value)} />
+                <br/>
+                <button type="submit">Create New Profile</button>
+                <button className="new-user-button" onClick={onNewUser}>Returning User? Login!</button>
             </form>
         </section>
     )

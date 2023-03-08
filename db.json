@@ -390,20 +390,27 @@
   "users": [
     {
       "id": 1,
-      "name": "Admin",
+      "username": "Admin",
       "password": "Admin",
       "admin": true
     },
     {
       "id": 2,
-      "name": "Matthew",
+      "username": "Matthew",
       "password": "Matthew",
       "admin": false
     },
     {
-      "name": "James",
+      "username": "James",
       "password": "James",
+      "admin": false,
       "id": 3
+    },
+    {
+      "username": "Bobby",
+      "password": "Bobby",
+      "admin": false,
+      "id": 4
     }
   ]
 }
