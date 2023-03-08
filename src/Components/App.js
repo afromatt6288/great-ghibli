@@ -13,12 +13,22 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false)
   const [admin, setAdmin] = useState(false)
 
+  const [seen, setSeen] = useState(false);
+
+  function togglePop () {
+    setSeen(!seen);
+   };
+
   return (
     <div className={loggedIn ? "background-image-login" : "background-image-logout"}>
      <header className="app-header"> 
      <h1>Great Ghibli Bibli</h1>
      <h5>Ie: The Great Ghibli Bible</h5>
-     <Login loggedIn={loggedIn} onLoggedIn={setLoggedIn} admin={admin} onAdmin={setAdmin}/>
+     <div>
+      <button className="login" onClick={togglePop}>Log In</button>
+    {seen ? <Login toggle={togglePop} loggedIn={loggedIn} onLoggedIn={setLoggedIn} admin={admin} onAdmin={setAdmin}/> : null}
+   </div>
+     {/* <Login loggedIn={loggedIn} onLoggedIn={setLoggedIn} admin={admin} onAdmin={setAdmin}/> */}
      </header>
       {/* {loggedIn ? <MoviePage/> : <LandingPage />} */}
       <NavBar admin={admin} />

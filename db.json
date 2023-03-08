@@ -371,20 +371,34 @@
           "still": ""
         }
       ]
+    },
+    {
+      "title": "Nausicaa",
+      "original_title": "",
+      "original_title_romanised": "",
+      "poster": "",
+      "movie_banner": "",
+      "synopsis": "",
+      "genres": [
+        "",
+        ""
+      ],
+      "release_date": "",
+      "id": 4
     }
   ],
   "users": [
     {
-        "id": 1,
-        "name": "Admin",
-        "password": "Admin",
-        "admin": true
+      "id": 1,
+      "name": "Admin",
+      "password": "Admin",
+      "admin": true
     },
     {
-        "id": 2,
-        "name": "Matthew",
-        "password": "Matthew",
-        "admin": false
+      "id": 2,
+      "name": "Matthew",
+      "password": "Matthew",
+      "admin": false
     }
-]
+  ]
 }

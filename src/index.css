@@ -1,5 +1,5 @@
 .admin {
-  float: right;
+  /* float: right;
   position: absolute;
   top: 40px;
   right: 0;
@@ -10,7 +10,7 @@
   font-size: 1.5em;
   color: firebrick;
   border: 2px solid firebrick;
-  transition: 0.1s;
+  transition: 0.1s; */
 }
 
 .admin:hover,
@@ -105,6 +105,21 @@ button {
   color: firebrick;
   border: 2px solid firebrick;
   transition: 0.1s;
+}
+
+.login-button {
+  /* float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: .25rem;
+  padding: 0.25rem;
+  text-decoration: none;
+  border-radius: 15px;
+  font-size: 1em;
+  color: firebrick;
+  border: 2px solid firebrick;
+  transition: 0.1s; */
 }
 
 .login:hover,
