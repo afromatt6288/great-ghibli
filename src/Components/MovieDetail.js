@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Redirect, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 function MovieDetail({admin}) {
     const [movie, setMovie] = useState(null);
@@ -14,7 +14,7 @@ function MovieDetail({admin}) {
     
     if (!movie) return <h2>Loading...</h2>
     
-    const{ title, original_title, original_title_romanised, sysnopsis, poster, genres} = movie
+    const { title, original_title, original_title_romanised, sysnopsis, poster, genres} = movie
     
     function handleDeleteClick() {
         fetch(`http://localhost:3001/movies/${id}`, {

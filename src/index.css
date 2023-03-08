@@ -93,10 +93,10 @@ button {
 }
 
 .login {
-  float: right;
+  /* float: right; */
   position: absolute;
   top: 0;
-  right: 0;
+  right: 5%;
   margin: .25rem;
   padding: 0.25rem;
   text-decoration: none;
@@ -147,6 +147,14 @@ button {
 
 .merch-links:visited {
   background-color: #282a92;
+}
+
+.modal {
+  position: absolute;
+  top: 14%;
+  left: 91%;
+  transform: translate(-50%, -50%);
+  background-color: #18a848;
 }
 
 .movie-item {
