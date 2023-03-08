@@ -149,7 +149,7 @@ button {
 }
 
 .movie-list {
-  border: 5px solid #ca5b5b; /* Gray border */
+  border: 5px solid #ca5b5b; /* colored border */
   border-radius: 30px;  /* Rounded border */
   padding: 20px; /* Some padding */
   width: flex; /* Set a small width */
@@ -166,9 +166,8 @@ nav a {
   text-decoration: none;
   font-size: 1.2em;
   color: firebrick;
-  border-bottom: 2px solid firebrick;
-  
-  transition: 3s;
+  border-bottom: 2px solid firebrick;  
+  transition: 1s;
 }
 
 nav a:hover,

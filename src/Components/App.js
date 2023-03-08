@@ -20,9 +20,6 @@ function App() {
     setSeen(!seen);
    };
 
-   console.log(currentUser)
-   console.log(admin)
-
   return (
       <div className={loggedIn ? "background-image-login" : "background-image-logout"}>
         <header className="app-header"> 

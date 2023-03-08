@@ -29,16 +29,16 @@ function NewUser({onNewUser, toggle}) {
     }    
 
     return (
-        <section id="form">
-            <form className="user-signup" onSubmit={handleSubmit}>
+        <section className="user-signup" id="signup-form">
+            <form onSubmit={handleSubmit}>
                 <p> Welcome New User <br/> Create Account Below!</p>
                 <input type="text" id="userName" placeholder="Set User Name" value={userName} onChange={e => setUserName(e.target.value)} />
                 <br/>
                 <input type="text" id="password" placeholder="Set Password" value={password} onChange={e => setPassword(e.target.value)} />
                 <br/>
                 <button type="submit">Create New Profile</button>
-                <button className="new-user-button" onClick={onNewUser}>Returning User? Login!</button>
             </form>
+                <button className="new-user-button" onClick={onNewUser}>Returning User? Login!</button>
         </section>
     )
 }
