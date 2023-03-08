@@ -30,17 +30,17 @@ function UserCard({user, onUserDelete}) {
           method: "DELETE"
         })        
         onUserDelete(id)
-      }
+    }
 
     
     
    
     return (
-            <div className ="users">
-                <h3>{username}</h3>
-                <label> Admin? <input type="checkbox" onChange={handleUpdate} checked={isAdmin}/></label>
-                <button onClick={handleUserDelete}>Delete</button>
-            </div>
+        <div className ="users">
+            <h3>{username}</h3>
+            <label> Admin? <input type="checkbox" onChange={handleUpdate} checked={isAdmin}/></label>
+            <button onClick={handleUserDelete}>Delete</button>
+        </div>
     )
 }
 

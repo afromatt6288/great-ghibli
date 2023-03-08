@@ -1,7 +1,7 @@
 import React from "react";
 
 function Search({search, onSearchChange, sortBy, onSortChange, onHandleFilter, filterBy, genres}) {
-
+  
   function handleSortChange(e){
     onSortChange(e.target.value)
   }

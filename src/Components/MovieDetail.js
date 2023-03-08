@@ -11,7 +11,6 @@ function MovieDetail({admin}) {
             .then(r => r.json())
             .then(data => setMovie(data))
     }, [id])
-    console.log(movie)
     
     if (!movie) return <h2>Loading...</h2>
     
@@ -22,7 +21,7 @@ function MovieDetail({admin}) {
           method: "DELETE"
         }) 
         history.push(`/movies`)       
-      }
+    }
     
     return (
         <section>
@@ -34,8 +33,6 @@ function MovieDetail({admin}) {
             <div className="detail-image-container">
                 <img className="detail-image" src={poster} alt={title}/>
             </div>
-
-
             {admin ? (
             <div className="actions">
                 <button>

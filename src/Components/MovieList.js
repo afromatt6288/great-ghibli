@@ -15,18 +15,16 @@ function MovieList() {
             .then(data => setMovies(data))
     }, [])
 
-    console.log(movies)
-
     // handle my sort
     const sortedMovies = [...movies].sort((movie1, movie2) => {
-    if (sortBy === "Alphabetical") {
-     return movie1.title.localeCompare(movie2.title)
-    } else if (sortBy === "Date") {
-        const dateA = new Date(movie1.release_date);
-        const dateB = new Date(movie2.release_date);
-        return dateA.getTime() - dateB.getTime();
-    }
-   })
+        if (sortBy === "Alphabetical") {
+            return movie1.title.localeCompare(movie2.title)
+        } else if (sortBy === "Date") {
+            const dateA = new Date(movie1.release_date);
+            const dateB = new Date(movie2.release_date);
+            return dateA.getTime() - dateB.getTime();
+        }
+    })
 
     // handle my filter    
     const genres = movies.map((movie)=> movie.genres)
