@@ -5,8 +5,11 @@ import Home from "./Home";
 import About from "./About";
 import MovieList from "./MovieList";
 import MovieDetail from "./MovieDetail";
+import MovieNew from "./MovieNew";
+import CharacterList from "./CharacterList"
+import CharacterDetail from "./CharacterDetail";
+import CharacterNew from "./CharacterNew"
 import Merch from "./Merch"
-import NewMovie from "./NewMovie";
 import Login from "./Login"
 import Users from "./Users"
 
@@ -60,18 +63,28 @@ function App() {
                 </Route>
                 {admin ? 
                 <Route exact path="/movies/new">
-                    <NewMovie />
-                </Route> : null }
-                {admin ? 
-                <Route exact path="/users">
-                    <Users users={users} onUserDelete={handleUserDelete}/>
+                    <MovieNew />
                 </Route> : null }
                 <Route exact path="/movies/:id">
                     <MovieDetail admin={admin}/>
                 </Route>
+                <Route exact path="/characters">
+                    <CharacterList />
+                </Route>
+                {admin ? 
+                <Route exact path="/characters/new">
+                    <CharacterNew />
+                </Route> : null }
+                <Route exact path="/characters/:id">
+                    <CharacterDetail admin={admin}/>
+                </Route>
                 <Route exact path="/merch">
                     <Merch />
                 </Route>
+                {admin ? 
+                <Route exact path="/users">
+                    <Users users={users} onUserDelete={handleUserDelete}/>
+                </Route> : null }
                 <Route path="*">
                     <h1>404 not found</h1>
                 </Route>

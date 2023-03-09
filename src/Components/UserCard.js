@@ -3,7 +3,6 @@ import React, { useState } from "react";
 function UserCard({user, onUserDelete}) {
     const {id, username, admin} = user
     const [isAdmin, setIsAdmin] = useState(admin);
-
     
     function handleUpdate(e) {
         e.preventDefault()
@@ -30,10 +29,7 @@ function UserCard({user, onUserDelete}) {
           method: "DELETE"
         })        
         onUserDelete(id)
-    }
-
-    
-    
+    }    
    
     return (
         <div className ="users">

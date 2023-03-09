@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-function NewMovie() {
+function CharacterNew() {
     const [title, setTitle] = useState("");
     const [originalTitle, setOriginalTitle] = useState("");
     const [originalTitleRomanised, setOriginalTitleRomanised] = useState("")
@@ -44,7 +44,7 @@ function NewMovie() {
 
     return (
         <section >
-            <h3 className="header">Add New Movie</h3>
+            <h3 className="header">Add New Character</h3>
             <form className="new-movie-form" onSubmit={handleSubmit}>
                 <input type="text" id="title" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} />
                 <input type="text" id="originalTitle" placeholder="Original Title" value={originalTitle} onChange={e => setOriginalTitle(e.target.value)} />
@@ -62,7 +62,7 @@ function NewMovie() {
     )
 }
 
-export default NewMovie
+export default CharacterNew
 
 // director
 // screenwriters

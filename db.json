@@ -443,12 +443,12 @@
         "rottenTomatoes": "98%",
         "imdb": "7.8/10"
       },
-      "character": [
+      "characters": [
         {
           "name": "Kiki",
           "originalCast": "Minami Takayama",
           "lastEnglishDubbingActor": "Kirsten Dunst",
-          "still": ""
+          "still": "https://media.istockphoto.com/id/1164822188/vector/male-avatar-profile-picture.jpg?s=612x612&w=0&k=20&c=KPsLgVIwEGdDvf4_kiynCXw96p_PhBjIGdU68qkpbuI="
         },
         {
           "name": "Jiji",
