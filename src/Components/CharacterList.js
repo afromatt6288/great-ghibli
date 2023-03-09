@@ -1,52 +1,53 @@
 import React, { useEffect, useState } from "react";
 import CharacterItem from "./CharacterItem";
-import Search from "./Search"
+import CharacterSearch from "./CharacterSearch"
 import { Card } from "semantic-ui-react"
 
 function CharacterList() {
-    const [movies, setMovies] = useState([]);
+    const [characters, setCharacters] = useState([]);
     const [search, setSearch] = useState("")
-    const [sortBy, setSortBy] = useState("Alphabetical")
-    const [filterBy, setFilterBy] = useState("All")
+    const [filterBySpecies, setFilterBySpecies] = useState("All")
+    const [filterByMovie, setFilterByMovie] = useState("All")
     
     useEffect(() => {
-        fetch("http://localhost:3001/movies")
+        fetch("http://localhost:3001/characters")
             .then(r => r.json())
-            .then(data => setMovies(data))
-    }, [])
+            .then(data => {
+                setCharacters(data)     
+            })
+        }, [])
 
-    // handle my sort
-    const sortedMovies = [...movies].sort((movie1, movie2) => {
-        if (sortBy === "Alphabetical") {
-            return movie1.title.localeCompare(movie2.title)
-        } else if (sortBy === "Date") {
-            const dateA = new Date(movie1.release_date);
-            const dateB = new Date(movie2.release_date);
-            return dateA.getTime() - dateB.getTime();
-        }
-        return console.log('error on sort')
-    })
+    // set uniqueSpecies filter    
+    const species = characters.map((character)=> character.species.name)
+    const allSpecies = species.flat(1)
+    const uniqueSpecies = [...new Set(allSpecies)]
+   
+    // set uniqueMovies filter   
+    const films = characters.map((character)=> character.film.title)
+    const allFilms = films.flat(1)
+    const uniqueFilms = [...new Set(allFilms)]
 
-    // handle my filter    
-    const genres = movies.map((movie)=> movie.genres)
-    const allGenres = genres.flat(1)
-    const uniqueGenres = [...new Set(allGenres)]
-    const filteredMovies = sortedMovies.filter((movie)=> filterBy === "All" ? sortedMovies : movie.genres[0] === filterBy || movie.genres[1] === filterBy )
+    // Handle the dual filter output
+    const filteredCharacters = characters.filter((character) => {
+        const matchSpecies = filterBySpecies === "All" || character.species.name === filterBySpecies;
+        const matchMovie = filterByMovie === "All" || character.film.title === filterByMovie;
+        return matchSpecies && matchMovie;
+      });
 
-    // this is how I am handling the Search function
-    const displayedMovies = filteredMovies.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase()))
+    // this is how I am handling the CharacterSearch function
+    const displayedCharacters = filteredCharacters.filter(character => character.name.toLowerCase().includes(search.toLowerCase()))
         
     return (
-        <section id="movies">
+        <section id="characters">
             <h2 className="header">Ghibli Characters</h2>
             <div className="search-bar">
-                <Search search={search} onSearchChange={setSearch} sortBy={sortBy} onSortChange={setSortBy} filterBy={filterBy} onHandleFilter={setFilterBy} genres={uniqueGenres}/>
+                <CharacterSearch search={search} onSearchChange={setSearch} filterBySpecies={filterBySpecies} onHandleSpeciesFilter={setFilterBySpecies} filterByMovie={filterByMovie} onHandleMovieFilter={setFilterByMovie} species={uniqueSpecies} films={uniqueFilms}/>
             </div>
             <div>
-            <div className="movie-list">
+            <div className="character-list">
                 <Card.Group className="cards" itemsPerRow={6}>
-                    {displayedMovies.map((movie)=> (
-                    <CharacterItem key={movie.id} movie={movie} />
+                    {displayedCharacters.map((character)=> (
+                    <CharacterItem key={character.id} character={character} />
                     ))}
                 </Card.Group>
             </div>

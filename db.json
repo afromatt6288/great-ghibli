@@ -44,88 +44,74 @@
       },
       "characters": [
         {
+          "id": 1,
           "name": "Pazu",
-          "originalCast": "Mayumi Tanaka",
-          "lastEnglishDubbingActor": "James Van Der Beek",
-          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8b/Pazu.jpg/revision/latest?cb=20210214205023"
+          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8b/Pazu.jpg"
         },
         {
+          "id": 2,
           "name": "Sheeta (Princess Lucita Toel Ul Laputa)",
-          "originalCast": "Keiko Yokozawa",
-          "lastEnglishDubbingActor": "Anna Paquin",
-          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c3/Sheeta.jpg/revision/latest?cb=20210214130459"
+          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c3/Sheeta.jpg"
         },
         {
+          "id": 3,
           "name": "Captain Dola",
-          "originalCast": "Kotoe Hatsui",
-          "lastEnglishDubbingActor": "Cloris Leachman",
-          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b3/Dola.png/revision/latest/scale-to-width-down/350?cb=20180910230438"
+          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b3/Dola.png"
         },
         {
+          "id": 4,
           "name": "Colonel Muska (Romuska Palo Ul Laputa)",
-          "originalCast": "Minori Terada",
-          "lastEnglishDubbingActor": "Mark Hamill",
-          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d5/Muska.jpg/revision/latest?cb=20210516132909"
+          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d5/Muska.jpg"
         },
         {
+          "id": 5,
           "name": "General Mouro",
-          "originalCast": "Ichirō Nagai",
-          "lastEnglishDubbingActor": "Jim Cummings",
-          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/12/Muoro.jpg/revision/latest?cb=20210516135925"
+          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/12/Muoro.jpg"
         },
         {
+          "id": 6,
           "name": "Uncle Pom",
-          "originalCast": "Fujio Tokita",
-          "lastEnglishDubbingActor": "Richard Dysart",
-          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/d/de/Uncle_Pom.png/revision/latest/scale-to-width-down/350?cb=20180809131657"
+          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/d/de/Uncle_Pom.png"
         },
         {
+          "id": 7,
           "name": "Charles",
-          "originalCast": "Takuzō Kamiyama",
-          "lastEnglishDubbingActor": "Michael McShane",
-          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f0/Charlie.jpg/revision/latest?cb=20181030030917"
+          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f0/Charlie.jpg"
         },
         {
+          "id": 8,
           "name": "Louis",
-          "originalCast": "Yoshito Yasuhara",
-          "lastEnglishDubbingActor": "Mandy Patinkin",
-          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/2/28/Charlies.jpg/revision/latest?cb=20181031025246"
+          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/2/28/Charlies.jpg"
         },
         {
+          "id": 9,
           "name": "Henri",
-          "originalCast": "Sukekiyo Kamiyama",
-          "lastEnglishDubbingActor": "Andy Dick",
-          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/15/Henri.jpg/revision/latest?cb=20181024031333"
+          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/15/Henri.jpg"
         },
         {
+          "id": 10,
           "name": "Mr. Duffi (Boss)",
-          "originalCast": "Hiroshi Ito",
-          "lastEnglishDubbingActor": "John Hostetter",
-          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0a/Duffi.png/revision/latest?cb=20170504183048"
+          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0a/Duffi.png"
         },
         {
+          "id": 11,
           "name": "Okami",
-          "originalCast": "Machiko Washio",
-          "lastEnglishDubbingActor": "Tress MacNeille",
-          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/6/65/Okami.jpg/revision/latest/scale-to-width-down/350?cb=20181031011501"
+          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/6/65/Okami.jpg"
         },
         {
+          "id": 12,
           "name": "Madge",
-          "originalCast": "Tarako",
-          "lastEnglishDubbingActor": "Debi Derryberry",
-          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0e/Madge.jpg/revision/latest?cb=20181031010512"
+          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0e/Madge.jpg"
         },
         {
+          "id": 13,
           "name": "Motro",
-          "originalCast": "Ryūji Saikachi",
-          "lastEnglishDubbingActor": "Eddie Frierson",
-          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/17/Eggman_laputa.jpg/revision/latest?cb=20181031021525"
+          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/17/Eggman_laputa.jpg"
         },
         {
+          "id": 14,
           "name": "Train Operator",
-          "originalCast": "Tomomichi Nishimura",
-          "lastEnglishDubbingActor": "Matt K. Miller",
-          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/1d/Castle_in_the_Sky_010.jpg/revision/latest/scale-to-width-down/350?cb=20200516011450"
+          "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/1d/Castle_in_the_Sky_010.jpg"
         }
       ],
       "species": [
@@ -639,88 +625,298 @@
   ],
   "characters": [
     {
+      "id": 1,
       "name": "Pazu",
+      "film": {
+        "id": 1,
+        "title": "Castle in the Sky",
+        "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",
+        "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
+      },
       "originalCast": "Mayumi Tanaka",
       "lastEnglishDubbingActor": "James Van Der Beek",
-      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8b/Pazu.jpg/revision/latest?cb=20210214205023"
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8b/Pazu.jpg",
+      "gender": "Male",
+      "age": "13",
+      "eye_color": "Black",
+      "hair_color": "Brown",
+      "species": {
+        "id": 1,
+        "name": "Human"
+      }
     },
     {
+      "id": 2,
       "name": "Sheeta (Princess Lucita Toel Ul Laputa)",
+      "film": {
+        "id": 1,
+        "title": "Castle in the Sky",
+        "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",
+        "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
+      },
       "originalCast": "Keiko Yokozawa",
       "lastEnglishDubbingActor": "Anna Paquin",
-      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c3/Sheeta.jpg/revision/latest?cb=20210214130459"
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c3/Sheeta.jpg",
+      "gender": "",
+      "age": "",
+      "eye_color": "",
+      "hair_color": "",
+      "species": {
+        "id": 1,
+        "name": ""
+      }
     },
     {
+      "id": 3,
       "name": "Captain Dola",
+      "film": {
+        "id": 1,
+        "title": "Castle in the Sky",
+        "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",
+        "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
+      },
       "originalCast": "Kotoe Hatsui",
       "lastEnglishDubbingActor": "Cloris Leachman",
-      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b3/Dola.png/revision/latest/scale-to-width-down/350?cb=20180910230438"
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b3/Dola.png",
+      "gender": "",
+      "age": "",
+      "eye_color": "",
+      "hair_color": "",
+      "species": {
+        "id": 1,
+        "name": ""
+      }
     },
     {
+      "id": 4,
       "name": "Colonel Muska (Romuska Palo Ul Laputa)",
+      "film": {
+        "id": 1,
+        "title": "Castle in the Sky",
+        "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",
+        "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
+      },
       "originalCast": "Minori Terada",
       "lastEnglishDubbingActor": "Mark Hamill",
-      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d5/Muska.jpg/revision/latest?cb=20210516132909"
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d5/Muska.jpg",
+      "gender": "",
+      "age": "",
+      "eye_color": "",
+      "hair_color": "",
+      "species": {
+        "id": 1,
+        "name": ""
+      }
     },
     {
+      "id": 5,
       "name": "General Mouro",
+      "film": {
+        "id": 1,
+        "title": "Castle in the Sky",
+        "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",
+        "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
+      },
       "originalCast": "Ichirō Nagai",
       "lastEnglishDubbingActor": "Jim Cummings",
-      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/12/Muoro.jpg/revision/latest?cb=20210516135925"
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/12/Muoro.jpg",
+      "gender": "",
+      "age": "",
+      "eye_color": "",
+      "hair_color": "",
+      "species": {
+        "id": 1,
+        "name": ""
+      }
     },
     {
+      "id": 6,
       "name": "Uncle Pom",
+      "film": {
+        "id": 1,
+        "title": "Castle in the Sky",
+        "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",
+        "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
+      },
       "originalCast": "Fujio Tokita",
       "lastEnglishDubbingActor": "Richard Dysart",
-      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/d/de/Uncle_Pom.png/revision/latest/scale-to-width-down/350?cb=20180809131657"
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/d/de/Uncle_Pom.png",
+      "gender": "",
+      "age": "",
+      "eye_color": "",
+      "hair_color": "",
+      "species": {
+        "id": 1,
+        "name": ""
+      }
     },
     {
+      "id": 7,
       "name": "Charles",
+      "film": {
+        "id": 1,
+        "title": "Castle in the Sky",
+        "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",
+        "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
+      },
       "originalCast": "Takuzō Kamiyama",
       "lastEnglishDubbingActor": "Michael McShane",
-      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f0/Charlie.jpg/revision/latest?cb=20181030030917"
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f0/Charlie.jpg",
+      "gender": "",
+      "age": "",
+      "eye_color": "",
+      "hair_color": "",
+      "species": {
+        "id": 1,
+        "name": ""
+      }
     },
     {
+      "id": 8,
       "name": "Louis",
+      "film": {
+        "id": 1,
+        "title": "Castle in the Sky",
+        "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",
+        "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
+      },
       "originalCast": "Yoshito Yasuhara",
       "lastEnglishDubbingActor": "Mandy Patinkin",
-      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/2/28/Charlies.jpg/revision/latest?cb=20181031025246"
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/2/28/Charlies.jpg",
+      "gender": "",
+      "age": "",
+      "eye_color": "",
+      "hair_color": "",
+      "species": {
+        "id": 1,
+        "name": ""
+      }
     },
     {
+      "id": 9,
       "name": "Henri",
+      "film": {
+        "id": 1,
+        "title": "Castle in the Sky",
+        "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",
+        "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
+      },
       "originalCast": "Sukekiyo Kamiyama",
       "lastEnglishDubbingActor": "Andy Dick",
-      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/15/Henri.jpg/revision/latest?cb=20181024031333"
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/15/Henri.jpg",
+      "gender": "",
+      "age": "",
+      "eye_color": "",
+      "hair_color": "",
+      "species": {
+        "id": 1,
+        "name": ""
+      }
     },
     {
+      "id": 10,
       "name": "Mr. Duffi (Boss)",
+      "film": {
+        "id": 1,
+        "title": "Castle in the Sky",
+        "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",
+        "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
+      },
       "originalCast": "Hiroshi Ito",
       "lastEnglishDubbingActor": "John Hostetter",
-      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0a/Duffi.png/revision/latest?cb=20170504183048"
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0a/Duffi.png",
+      "gender": "",
+      "age": "",
+      "eye_color": "",
+      "hair_color": "",
+      "species": {
+        "id": 1,
+        "name": ""
+      }
     },
     {
+      "id": 11,
       "name": "Okami",
+      "film": {
+        "id": 1,
+        "title": "Castle in the Sky",
+        "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",
+        "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
+      },
       "originalCast": "Machiko Washio",
       "lastEnglishDubbingActor": "Tress MacNeille",
-      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/6/65/Okami.jpg/revision/latest/scale-to-width-down/350?cb=20181031011501"
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/6/65/Okami.jpg",
+      "gender": "",
+      "age": "",
+      "eye_color": "",
+      "hair_color": "",
+      "species": {
+        "id": 1,
+        "name": ""
+      }
     },
     {
+      "id": 12,
       "name": "Madge",
+      "film": {
+        "id": 1,
+        "title": "Castle in the Sky",
+        "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",
+        "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
+      },
       "originalCast": "Tarako",
       "lastEnglishDubbingActor": "Debi Derryberry",
-      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0e/Madge.jpg/revision/latest?cb=20181031010512"
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0e/Madge.jpg",
+      "gender": "",
+      "age": "",
+      "eye_color": "",
+      "hair_color": "",
+      "species": {
+        "id": 1,
+        "name": ""
+      }
     },
     {
+      "id": 13,
       "name": "Motro",
+      "film": {
+        "id": 1,
+        "title": "Castle in the Sky",
+        "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",
+        "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
+      },
       "originalCast": "Ryūji Saikachi",
       "lastEnglishDubbingActor": "Eddie Frierson",
-      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/17/Eggman_laputa.jpg/revision/latest?cb=20181031021525"
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/17/Eggman_laputa.jpg",
+      "gender": "",
+      "age": "",
+      "eye_color": "",
+      "hair_color": "",
+      "species": {
+        "id": 1,
+        "name": ""
+      }
     },
     {
+      "id": 14,
       "name": "Train Operator",
+      "film": {
+        "id": 1,
+        "title": "Castle in the Sky",
+        "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",
+        "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
+      },
       "originalCast": "Tomomichi Nishimura",
       "lastEnglishDubbingActor": "Matt K. Miller",
-      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/1d/Castle_in_the_Sky_010.jpg/revision/latest/scale-to-width-down/350?cb=20200516011450"
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/1d/Castle_in_the_Sky_010.jpg",
+      "gender": "",
+      "age": "",
+      "eye_color": "",
+      "hair_color": "",
+      "species": {
+        "id": 1,
+        "name": ""
+      }
     }
   ],
   "users": [

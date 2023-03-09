@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MovieItem from "./MovieItem";
-import Search from "./Search"
+import MovieSearch from "./MovieSearch"
 import { Card } from "semantic-ui-react"
 
 function MovieList() {
@@ -33,14 +33,14 @@ function MovieList() {
     const uniqueGenres = [...new Set(allGenres)]
     const filteredMovies = sortedMovies.filter((movie)=> filterBy === "All" ? sortedMovies : movie.genres[0] === filterBy || movie.genres[1] === filterBy )
 
-    // this is how I am handling the Search function
+    // this is how I am handling the MovieSearch function
     const displayedMovies = filteredMovies.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase()))
         
     return (
         <section id="movies">
             <h2 className="header">Ghibli Movies</h2>
             <div className="search-bar">
-                <Search search={search} onSearchChange={setSearch} sortBy={sortBy} onSortChange={setSortBy} filterBy={filterBy} onHandleFilter={setFilterBy} genres={uniqueGenres}/>
+                <MovieSearch search={search} onSearchChange={setSearch} sortBy={sortBy} onSortChange={setSortBy} filterBy={filterBy} onHandleFilter={setFilterBy} genres={uniqueGenres}/>
             </div>
             <div>
             <div className="movie-list">

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Search({search, onSearchChange, sortBy, onSortChange, onHandleFilter, filterBy, genres}) {
+function MovieSearch({search, onSearchChange, sortBy, onSortChange, onHandleFilter, filterBy, genres}) {
   
   function handleSortChange(e){
     onSortChange(e.target.value)
@@ -21,7 +21,6 @@ function Search({search, onSearchChange, sortBy, onSortChange, onHandleFilter, f
           onChange={handleSortChange}
         />
         Alphabetical
-      <label>
         <input
           type="radio"
           value="Date"
@@ -31,9 +30,8 @@ function Search({search, onSearchChange, sortBy, onSortChange, onHandleFilter, f
         />
         Date
       </label>
-      </label>
       <label className="filter">
-        <strong>Filter:</strong>
+        <strong>Genre Filter:</strong>
         <select onChange={handleFilter} value={filterBy}>
           <option value="All">All</option>
           {genres.map((genre)=> <option value={genre}>{genre}</option>)}
@@ -47,4 +45,4 @@ function Search({search, onSearchChange, sortBy, onSortChange, onHandleFilter, f
   );
 }
 
-export default Search;
+export default MovieSearch;

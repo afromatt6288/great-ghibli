@@ -18,7 +18,7 @@ function App() {
     const [seen, setSeen] = useState(false)
     const [currentUser, setCurrentUser] = useState([])  
     const [users, setUsers] = useState([]) 
-    const [admin, setAdmin] = useState([currentUser.admin])
+    const admin = currentUser.admin
 
     useEffect(() => {
         fetch("http://localhost:3001/users")

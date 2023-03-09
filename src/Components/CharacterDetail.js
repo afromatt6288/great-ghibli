@@ -2,77 +2,57 @@ import React, { useEffect, useState } from "react";
 import { useParams, useHistory, Link } from "react-router-dom"
 
 function CharacterDetail({admin}) {
-    const [movie, setMovie] = useState(null);
+    const [character, setCharacter] = useState(null);
     const { id } = useParams()
     const history = useHistory()
     
     useEffect(() => {
-        fetch(`http://localhost:3001/movies/${id}`)
+        fetch(`http://localhost:3001/characters/${id}`)
             .then(r => r.json())
-            .then(data => setMovie(data))
+            .then(data => setCharacter(data))
     }, [id])
     
-    if (!movie) return <h2>Loading...</h2>
+    if (!character) return <h2>Loading...</h2>
     
-    const { title, original_title, original_title_romanised, synopsis, poster, genres, movie_banner, release_date, director, screenwriters, producers, music, rating, running_time, budgetUSD, boxOfficeUSD, awards, reviews, characters} = movie
-    const [genre1, genre2] = genres
-    const {rottenTomatoes, imdb} = reviews
-    const {name, originalCast, lastEnglishDubbingActor, still} = characters
+    const {name, originalCast, lastEnglishDubbingActor, film, still, gender, age, eye_color, hair_color, species} = character
+    const {title, poster, movie_banner} = film
     
     function handleDeleteClick() {
-        fetch(`http://localhost:3001/movies/${id}`, {
+        fetch(`http://localhost:3001/characters/${id}`, {
           method: "DELETE"
         }) 
-        history.push(`/movies`)       
+        history.push(`/characters`)       
     }
     
     return (
         <section>
-            <header className="detail-header">
+            <header className="character-detail-header">
                 <div className="container">
-                    <span className="highlight">{title}</span>
-                </div>
-                <div className="container">
-                    <span className="highlight">{original_title}</span>
-                </div>
-                <div className="container">
-                    <span className="highlight">{original_title_romanised}</span>
+                    <span className="highlight">{name}</span>
+                    <img className="character-img" src={still}/>
                 </div>
             </header>
-            <div className="detail-intro">
+            <div className="character-detail-intro">
                 <span>
-                    <label>Genres: <p>{genre1} / {genre2}</p></label> 
-                    <label>Released: <p>{release_date}</p></label>
-                    <label>Running time:<p>{running_time} min</p></label>
-                    <label>Rated: <p>{rating}</p></label>
+                    <label>Age: <p>{age}</p></label> 
+                    <label>Hair Color: <p>{hair_color}</p></label>
                 </span>
-                <p>{synopsis}</p>
                 <span>
-                    <label>Directed by:<p>{director}</p></label> 
-                    <label>Produced by:<p>{producers}</p></label>
-                    <label>Music by:<p>{music}</p></label>
-                    <label>Screenwriters:<p>{screenwriters}</p></label>
+                    <label>Gender: <p>{gender}</p></label>
+                    <label>Eye Color:<p>{eye_color}</p></label>
                 </span>
-                <h3>Reviews: rottenTomatoes: {rottenTomatoes} / imdb: {imdb}</h3>
-                <h2>Characters:</h2>
-                <div>{characters.map((character)=> (
-                    <div>
-                        <h4>{character.name}</h4>
-                        <h4>{character.originalCast}</h4>
-                        <h4>{character.lastEnglishDubbingActor}</h4>
-                        <Link to={`/movies/${id}`}>
-                            <img className="img-thumb" src={poster} alt={title} />
-                        </Link>
-                        <img className="img-thumb" src={character.still}/>
-                    </div>
-                ))}
-                </div>
-                <h2>Awards:</h2>
-                <div>{awards}</div>
+                <label>Species: <p>{species.name}</p></label>
                 <span>
-                    <label>Budget USD: <p>{budgetUSD}</p></label> 
-                    <label>Box Office USD: <p>{boxOfficeUSD}</p></label>
+                    <label>Original Cast:<p>{originalCast}</p></label> 
+                    <label>Last English Dubbing Actor:<p>{lastEnglishDubbingActor}</p></label>
                 </span>
+                <h2>Movie:</h2>
+                <div>
+                    <h4>{title}</h4>
+                    <Link to={`/movies/${film.id}`}>
+                        <img className="img-thumb" src={poster} alt={title} />
+                    </Link>  
+                </div>                
             </div>
             <div className="detail-image-container">
                 <img className="detail-image" src={poster} alt={title}/>
