@@ -6,11 +6,9 @@ function UserCard({user, onUserDelete}) {
     
     function handleUpdate(e) {
         e.preventDefault()
-        console.log(id)
         const formData = {
             admin: !isAdmin
         }
-        console.log(isAdmin)
         fetch(`http://localhost:3001/users/${id}`, {
             method: "PATCH",
             headers: {

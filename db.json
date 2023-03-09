@@ -637,6 +637,92 @@
       ]
     }
   ],
+  "characters": [
+    {
+      "name": "Pazu",
+      "originalCast": "Mayumi Tanaka",
+      "lastEnglishDubbingActor": "James Van Der Beek",
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8b/Pazu.jpg/revision/latest?cb=20210214205023"
+    },
+    {
+      "name": "Sheeta (Princess Lucita Toel Ul Laputa)",
+      "originalCast": "Keiko Yokozawa",
+      "lastEnglishDubbingActor": "Anna Paquin",
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c3/Sheeta.jpg/revision/latest?cb=20210214130459"
+    },
+    {
+      "name": "Captain Dola",
+      "originalCast": "Kotoe Hatsui",
+      "lastEnglishDubbingActor": "Cloris Leachman",
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b3/Dola.png/revision/latest/scale-to-width-down/350?cb=20180910230438"
+    },
+    {
+      "name": "Colonel Muska (Romuska Palo Ul Laputa)",
+      "originalCast": "Minori Terada",
+      "lastEnglishDubbingActor": "Mark Hamill",
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d5/Muska.jpg/revision/latest?cb=20210516132909"
+    },
+    {
+      "name": "General Mouro",
+      "originalCast": "Ichirō Nagai",
+      "lastEnglishDubbingActor": "Jim Cummings",
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/12/Muoro.jpg/revision/latest?cb=20210516135925"
+    },
+    {
+      "name": "Uncle Pom",
+      "originalCast": "Fujio Tokita",
+      "lastEnglishDubbingActor": "Richard Dysart",
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/d/de/Uncle_Pom.png/revision/latest/scale-to-width-down/350?cb=20180809131657"
+    },
+    {
+      "name": "Charles",
+      "originalCast": "Takuzō Kamiyama",
+      "lastEnglishDubbingActor": "Michael McShane",
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f0/Charlie.jpg/revision/latest?cb=20181030030917"
+    },
+    {
+      "name": "Louis",
+      "originalCast": "Yoshito Yasuhara",
+      "lastEnglishDubbingActor": "Mandy Patinkin",
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/2/28/Charlies.jpg/revision/latest?cb=20181031025246"
+    },
+    {
+      "name": "Henri",
+      "originalCast": "Sukekiyo Kamiyama",
+      "lastEnglishDubbingActor": "Andy Dick",
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/15/Henri.jpg/revision/latest?cb=20181024031333"
+    },
+    {
+      "name": "Mr. Duffi (Boss)",
+      "originalCast": "Hiroshi Ito",
+      "lastEnglishDubbingActor": "John Hostetter",
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0a/Duffi.png/revision/latest?cb=20170504183048"
+    },
+    {
+      "name": "Okami",
+      "originalCast": "Machiko Washio",
+      "lastEnglishDubbingActor": "Tress MacNeille",
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/6/65/Okami.jpg/revision/latest/scale-to-width-down/350?cb=20181031011501"
+    },
+    {
+      "name": "Madge",
+      "originalCast": "Tarako",
+      "lastEnglishDubbingActor": "Debi Derryberry",
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0e/Madge.jpg/revision/latest?cb=20181031010512"
+    },
+    {
+      "name": "Motro",
+      "originalCast": "Ryūji Saikachi",
+      "lastEnglishDubbingActor": "Eddie Frierson",
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/17/Eggman_laputa.jpg/revision/latest?cb=20181031021525"
+    },
+    {
+      "name": "Train Operator",
+      "originalCast": "Tomomichi Nishimura",
+      "lastEnglishDubbingActor": "Matt K. Miller",
+      "still": "https://static.wikia.nocookie.net/studio-ghibli/images/1/1d/Castle_in_the_Sky_010.jpg/revision/latest/scale-to-width-down/350?cb=20200516011450"
+    }
+  ],
   "users": [
     {
       "id": 1,
