@@ -3,12 +3,14 @@ import UserCard from "./UserCard"
 
 function Users({users, onUserDelete}) {
 
-    console.log(users)    
+    const sortedUsers = [...users].sort((user1, user2) => {
+            return user1.username.localeCompare(user2.username)
+    })   
 
     return (
         <section id="users">
             <h3 className="header">Users</h3>
-            {users.map((user)=> (
+            {sortedUsers.map((user)=> (
             <UserCard user={user} onUserDelete={onUserDelete}/>
         ))}
         </section>

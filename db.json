@@ -131,7 +131,9 @@
       "species": [
         "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
       ],
-      "locations": ["https://ghibliapi.herokuapp.com/locations/"],
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
+      ],
       "vehicles": [
         "https://ghibliapi.herokuapp.com/vehicles/4e09b023-f650-4747-9ab9-eacf14540cfb"
       ]
@@ -228,8 +230,12 @@
       "species": [
         "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
       ],
-      "locations": ["https://ghibliapi.herokuapp.com/locations/"],
-      "vehicles": ["https://ghibliapi.herokuapp.com/vehicles/"]
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
+      ],
+      "vehicles": [
+        "https://ghibliapi.herokuapp.com/vehicles/"
+      ]
     },
     {
       "id": 3,
@@ -388,8 +394,12 @@
         "https://ghibliapi.herokuapp.com/species/603428ba-8a86-4b0b-a9f1-65df6abef3d3",
         "https://ghibliapi.herokuapp.com/species/74b7f547-1577-4430-806c-c358c8b6bcf5"
       ],
-      "locations": ["https://ghibliapi.herokuapp.com/locations/"],
-      "vehicles": ["https://ghibliapi.herokuapp.com/vehicles/"]
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
+      ],
+      "vehicles": [
+        "https://ghibliapi.herokuapp.com/vehicles/"
+      ]
     },
     {
       "id": 4,
@@ -398,21 +408,25 @@
       "original_title_romanised": "Majo no takkyūbin",
       "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/7nO5DUMnGUuXrA4r2h6ESOKQRrx.jpg",
       "movie_banner": "https://image.tmdb.org/t/p/original/h5pAEVma835u8xoE60kmLVopLct.jpg",
-      "synopsis":"From the legendary Hayao Miyazaki comes the beloved story of a resourceful young witch who uses her broom to create a delivery service, only to lose her gift of flight in a moment of self-doubt.",
-	    "director":"Hayao Miyazaki",
-	    "screenwriters":["Hayao Miyazaki"],
-	    "producers":["Hayao Miyazaki"],
-	    "music":"Joe Hisaishi",
-	    "genres": [
+      "synopsis": "From the legendary Hayao Miyazaki comes the beloved story of a resourceful young witch who uses her broom to create a delivery service, only to lose her gift of flight in a moment of self-doubt.",
+      "director": "Hayao Miyazaki",
+      "screenwriters": [
+        "Hayao Miyazaki"
+      ],
+      "producers": [
+        "Hayao Miyazaki"
+      ],
+      "music": "Joe Hisaishi",
+      "genres": [
         "Adventure",
-		    "Family"
-	    ],
+        "Family"
+      ],
       "release_date": "July 29, 1989",
       "running_time": "102",
-	    "rating":"G",
-	    "budgetUSD":"6,900,000",
-	    "boxOfficeUSD":"41,800,800",
-	    "awards":[
+      "rating": "G",
+      "budgetUSD": "6,900,000",
+      "boxOfficeUSD": "41,800,800",
+      "awards": [
         "12th Anime Grand Prix; Best Anime, Best Female Character, Best Anime Theme Song",
         "44th Mainichi Film Award; \tBest Animated Film",
         "Kinema Junpo Awards; Readers' Choice Award",
@@ -425,190 +439,202 @@
         "Tokyo Metropolitan Cultural Honor; Best Film",
         "7th Annual Money Making Director's Award; Best Director"
       ],
-	    "reviews":{
-		    "rottenTomatoes":"98%",
-		    "imdb":"7.8/10"
-	    },
-      "character":[
-		    {
-          "name":"Kiki",
-          "originalCast":"Minami Takayama",
-          "lastEnglishDubbingActor":"Kirsten Dunst",
-          "still":""
+      "reviews": {
+        "rottenTomatoes": "98%",
+        "imdb": "7.8/10"
+      },
+      "character": [
+        {
+          "name": "Kiki",
+          "originalCast": "Minami Takayama",
+          "lastEnglishDubbingActor": "Kirsten Dunst",
+          "still": ""
         },
-		    {
-          "name":"Jiji",
-          "originalCast":"Rei Sakuma",
-          "lastEnglishDubbingActor":"Phil Hartman",
-          "still":""},
-		    {
-          "name":"Osono",
-          "originalCast":"Keiko Toda",
-          "lastEnglishDubbingActor":"Tress MacNeille",
-          "still":""
+        {
+          "name": "Jiji",
+          "originalCast": "Rei Sakuma",
+          "lastEnglishDubbingActor": "Phil Hartman",
+          "still": ""
         },
-		    {
-          "name":"Ursula",
-          "originalCast":"Minami Takayama",
-          "lastEnglishDubbingActor":"Janeane Garofalo",
-          "still":""
+        {
+          "name": "Osono",
+          "originalCast": "Keiko Toda",
+          "lastEnglishDubbingActor": "Tress MacNeille",
+          "still": ""
         },
-		    {
-          "name":"Tombo",
-          "originalCast":"Kappei Yamaguchi",
-          "lastEnglishDubbingActor":"Matthew Lawrence",
-          "still":""
+        {
+          "name": "Ursula",
+          "originalCast": "Minami Takayama",
+          "lastEnglishDubbingActor": "Janeane Garofalo",
+          "still": ""
         },
-		    {
-          "name":"Fukuo",
-          "originalCast":"Kōichi Yamadera",
-          "lastEnglishDubbingActor":"Brian Cummings",
-          "still":""},
-		    {
-          "name":"Kokiri (Kiki's mother)",
-          "originalCast":"Mieko Nobusawa",
-          "lastEnglishDubbingActor":"Kath Soucie",
-          "still":""
+        {
+          "name": "Tombo",
+          "originalCast": "Kappei Yamaguchi",
+          "lastEnglishDubbingActor": "Matthew Lawrence",
+          "still": ""
         },
-		    {
-          "name":"Okino (Kiki's father)",
-          "originalCast":"Kōichi Miura",
-          "lastEnglishDubbingActor":"Jeff Bennett",
-          "still":""
+        {
+          "name": "Fukuo",
+          "originalCast": "Kōichi Yamadera",
+          "lastEnglishDubbingActor": "Brian Cummings",
+          "still": ""
         },
-		    {
-          "name":"Madame",
-          "originalCast":"Haruko Kato",
-          "lastEnglishDubbingActor":"Debbie Reynolds",
-          "still":""
+        {
+          "name": "Kokiri (Kiki's mother)",
+          "originalCast": "Mieko Nobusawa",
+          "lastEnglishDubbingActor": "Kath Soucie",
+          "still": ""
         },
-		    {
-          "name":"Barsa",
-          "originalCast":"Hiroko Seki",
-          "lastEnglishDubbingActor":"Edie McClurg",
-          "still":""
+        {
+          "name": "Okino (Kiki's father)",
+          "originalCast": "Kōichi Miura",
+          "lastEnglishDubbingActor": "Jeff Bennett",
+          "still": ""
         },
-		    {
-          "name":"Senior Witch",
-          "originalCast":"Yūko Kobayashi",
-          "lastEnglishDubbingActor":"Debi Derryberry",
-          "still":""
+        {
+          "name": "Madame",
+          "originalCast": "Haruko Kato",
+          "lastEnglishDubbingActor": "Debbie Reynolds",
+          "still": ""
         },
-		    {
-          "name":"Madame's Granddaughter",
-          "originalCast":"Keiko Kagimoto",
-          "lastEnglishDubbingActor":"Sherry Lynn",
-          "still":""
+        {
+          "name": "Barsa",
+          "originalCast": "Hiroko Seki",
+          "lastEnglishDubbingActor": "Edie McClurg",
+          "still": ""
         },
-		    {
-          "name":"Ket",
-          "originalCast":"Yuriko Fuchizaki",
-          "lastEnglishDubbingActor":"Pamela Segall",
-          "still":""
+        {
+          "name": "Senior Witch",
+          "originalCast": "Yūko Kobayashi",
+          "lastEnglishDubbingActor": "Debi Derryberry",
+          "still": ""
         },
-		    {
-          "name":"Maki (Ket's aunt)",
-          "originalCast":"Kikuko Inoue",
-          "lastEnglishDubbingActor":"Julia Fletcher",
-          "still":""
+        {
+          "name": "Madame's Granddaughter",
+          "originalCast": "Keiko Kagimoto",
+          "lastEnglishDubbingActor": "Sherry Lynn",
+          "still": ""
         },
-		    {
-          "name":"Ket's mother",
-          "originalCast":"Mika Doi",
-          "lastEnglishDubbingActor":"Julia Fletcher",
-          "still":""
+        {
+          "name": "Ket",
+          "originalCast": "Yuriko Fuchizaki",
+          "lastEnglishDubbingActor": "Pamela Segall",
+          "still": ""
         },
-		    {
-          "name":"Ket's father",
-          "originalCast":"Takaya Hashi",
-          "lastEnglishDubbingActor":"John DeMita",
-          "still":""
+        {
+          "name": "Maki (Ket's aunt)",
+          "originalCast": "Kikuko Inoue",
+          "lastEnglishDubbingActor": "Julia Fletcher",
+          "still": ""
         },
-		    {
-          "name":"Ket's grandmother",
-          "originalCast":"Yoshiko Asai",
-          "lastEnglishDubbingActor":"Julia Fletcher",
-          "still":""
+        {
+          "name": "Ket's mother",
+          "originalCast": "Mika Doi",
+          "lastEnglishDubbingActor": "Julia Fletcher",
+          "still": ""
         },
-		    {
-          "name":"Miss Dora",
-          "originalCast":"Shō Saito",
-          "lastEnglishDubbingActor":"Fay Dewitt",
-          "still":""
+        {
+          "name": "Ket's father",
+          "originalCast": "Takaya Hashi",
+          "lastEnglishDubbingActor": "John DeMita",
+          "still": ""
         },
-		    {
-          "name":"Truck Driver",
-          "originalCast":"Michihiro Ikemizu",
-          "lastEnglishDubbingActor":"N/A",
-          "still":""
+        {
+          "name": "Ket's grandmother",
+          "originalCast": "Yoshiko Asai",
+          "lastEnglishDubbingActor": "Julia Fletcher",
+          "still": ""
         },
-		    {
-          "name":"Hotel Receptionist",
-          "originalCast":"Shinpachi Tsuji",
-          "lastEnglishDubbingActor":"Matt K. Miller",
-          "still":""
+        {
+          "name": "Miss Dora",
+          "originalCast": "Shō Saito",
+          "lastEnglishDubbingActor": "Fay Dewitt",
+          "still": ""
         },
-		    {
-          "name":"Policeman",
-          "originalCast":"Kōichi Yamadera",
-          "lastEnglishDubbingActor":"Matt K. Miller",
-          "still":""
+        {
+          "name": "Truck Driver",
+          "originalCast": "Michihiro Ikemizu",
+          "lastEnglishDubbingActor": "N/A",
+          "still": ""
         },
-		    {
-          "name":"Radio Announcer",
-          "originalCast":"Kōichi Yamadera",
-          "lastEnglishDubbingActor":"Corey Burton",
-          "still":""
+        {
+          "name": "Hotel Receptionist",
+          "originalCast": "Shinpachi Tsuji",
+          "lastEnglishDubbingActor": "Matt K. Miller",
+          "still": ""
         },
-		    {
-          "name":"Man with Push Broom",
-          "originalCast":"Takashi Taguchi",
-          "lastEnglishDubbingActor":"Jeff Bennett",
-          "still":""
+        {
+          "name": "Policeman",
+          "originalCast": "Kōichi Yamadera",
+          "lastEnglishDubbingActor": "Matt K. Miller",
+          "still": ""
         },
-		    {
-          "name":"Dirigible Captain",
-          "originalCast":"Akio Ōtsuka",
-          "lastEnglishDubbingActor":"John Hostetter",
-          "still":""
+        {
+          "name": "Radio Announcer",
+          "originalCast": "Kōichi Yamadera",
+          "lastEnglishDubbingActor": "Corey Burton",
+          "still": ""
         },
-		    {
-          "name":"Clock Tower Caretaker",
-          "originalCast":"Tomomichi Nishimura",
-          "lastEnglishDubbingActor":"Lewis Arquette",
-          "still":""
+        {
+          "name": "Man with Push Broom",
+          "originalCast": "Takashi Taguchi",
+          "lastEnglishDubbingActor": "Jeff Bennett",
+          "still": ""
         },
-		    {
-          "name":"Baby",
-          "originalCast":"Chika Sakamoto",
-          "lastEnglishDubbingActor":"N/A",
-          "still":""
+        {
+          "name": "Dirigible Captain",
+          "originalCast": "Akio Ōtsuka",
+          "lastEnglishDubbingActor": "John Hostetter",
+          "still": ""
         },
-		    {
-          "name":"Friends",
-          "originalCast":["Yūko Tsuga","Yoshiko Kamei"],
-          "lastEnglishDubbingActor":["Lara Cody","Barbara Goodson"],
-          "still":""
+        {
+          "name": "Clock Tower Caretaker",
+          "originalCast": "Tomomichi Nishimura",
+          "lastEnglishDubbingActor": "Lewis Arquette",
+          "still": ""
         },
-		    {
-          "name":"Old Lady",
-          "originalCast":"Hiroko Maruyama",
-          "lastEnglishDubbingActor":"Melanie MacQueen",
-          "still":""
+        {
+          "name": "Baby",
+          "originalCast": "Chika Sakamoto",
+          "lastEnglishDubbingActor": "N/A",
+          "still": ""
         },
-		    {
-          "name":"Boy",
-          "originalCast":"Hiroko Maruyama",
-          "lastEnglishDubbingActor":"Unknown",
-          "still":""
+        {
+          "name": "Friends",
+          "originalCast": [
+            "Yūko Tsuga",
+            "Yoshiko Kamei"
+          ],
+          "lastEnglishDubbingActor": [
+            "Lara Cody",
+            "Barbara Goodson"
+          ],
+          "still": ""
+        },
+        {
+          "name": "Old Lady",
+          "originalCast": "Hiroko Maruyama",
+          "lastEnglishDubbingActor": "Melanie MacQueen",
+          "still": ""
+        },
+        {
+          "name": "Boy",
+          "originalCast": "Hiroko Maruyama",
+          "lastEnglishDubbingActor": "Unknown",
+          "still": ""
         }
-	    ],
+      ],
       "species": [
         "https://ghibliapi.herokuapp.com/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
         "https://ghibliapi.herokuapp.com/species/603428ba-8a86-4b0b-a9f1-65df6abef3d3"
       ],
-      "locations": ["https://ghibliapi.herokuapp.com/locations/"],
-      "vehicles": ["https://ghibliapi.herokuapp.com/vehicles/"]
+      "locations": [
+        "https://ghibliapi.herokuapp.com/locations/"
+      ],
+      "vehicles": [
+        "https://ghibliapi.herokuapp.com/vehicles/"
+      ]
     }
   ],
   "users": [
@@ -635,6 +661,12 @@
       "password": "Bobby",
       "admin": false,
       "id": 4
+    },
+    {
+      "username": "Jonah",
+      "password": "Jonah",
+      "admin": false,
+      "id": 5
     }
   ]
 }

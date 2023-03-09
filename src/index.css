@@ -80,6 +80,12 @@ button {
   margin: 30px;
 } */
 
+.detail-banner{
+  height: 90vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
 .detail-intro {
   display: inline-block;
   left: 0;
@@ -92,6 +98,11 @@ button {
 
 .detail-intro h2{
   font-size: 2vw;
+}
+
+.detail-intro span {
+  display: flex;
+  justify-content: space-around;
 }
 
 .detail-image {
@@ -111,9 +122,9 @@ button {
   /* object-fit: cover; */
   width: 40vw;
   height: 70vh;
-  border: 1px solid #ddd; /*Gray border*/
-  border-radius: 10px;  /*Rounded border*/
-  padding: 5px; /* Some padding */
+  /* border: 1px solid #ddd;  */
+  /* border-radius: 10px;   */
+  /* padding: 5px;  */
 }
 
 .header {  
