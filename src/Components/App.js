@@ -12,6 +12,7 @@ import CharacterNew from "./CharacterNew"
 import Merch from "./Merch"
 import Login from "./Login"
 import Users from "./Users"
+import MusicPlayer from "./MusicPlayer"
 
 function App() {
     const [loggedIn, setLoggedIn] = useState(false)
@@ -101,6 +102,7 @@ function App() {
             <header className="app-header"> 
             <h1>Great Ghibli Bibli</h1>
             <h5>Ie: The Great Ghibli Bible</h5>
+            <MusicPlayer/>
             <div>
                 <button className="login" onClick={togglePop} >{loggedIn ? "Profile" : "Log In"}</button>
                 {seen ? <Login toggle={togglePop} loggedIn={loggedIn} onLoggedIn={setLoggedIn} admin={admin} currentUser={currentUser} onCurrentUser={setCurrentUser} users={users} onAddUser={handleAddUser}/> : null}
