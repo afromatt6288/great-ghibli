@@ -20,8 +20,11 @@ function CharacterList({films, characters, species, vehicles}) {
     // const allFilms = films.flat(1)
     // const uniqueFilms = [...new Set(allFilms)]
 
+    // Set my characters in Alphabetical order
+    const alphabeticalCharacters = [...characters].sort((character1, character2) =>  character1.name.localeCompare(character2.name))
+
     // Handle the dual filter output
-    const filteredCharacters = characters.filter((character) => {
+    const filteredCharacters = alphabeticalCharacters.filter((character) => {
         const matchSpecies = filterBySpecies === "All" || character.species === filterBySpecies;
         const matchFilm = filterByFilm === "All" || character.film.title === filterByFilm;
         return matchSpecies && matchFilm;
@@ -50,3 +53,4 @@ function CharacterList({films, characters, species, vehicles}) {
 }
 
 export default CharacterList;
+
