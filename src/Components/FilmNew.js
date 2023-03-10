@@ -48,9 +48,19 @@ function FilmNew() {
                 awards: [awards],
                 reviews: {
                     rottenTomatoes: rottenTomatoes,
-                    imdb: imdb,
+                    imdb: imdb
                 },
-
+                characters: [
+                        {
+                          name: "",
+                          originalCast: "",
+                          lastEnglishDubbingActor: "",
+                          still: ""
+                        }
+                      ],
+                species: [""],
+                locations: [""],
+                vehicles: [""]
         }
         fetch("http://localhost:3001/films", {
             method: "POST",
@@ -76,7 +86,7 @@ function FilmNew() {
                 <input type="text" id="genres" placeholder="Genre 1, Genre 2, etc..." value={genres} onChange={e => setGenres(e.target.value)} />
                 <input type="text" id="poster" placeholder="Poster URL" value={poster} onChange={e => setPoster(e.target.value)} />
                 <input type="text" id="movieBanner" placeholder="Film Banner URL" value={movieBanner} onChange={e => setMovieBanner(e.target.value)} />
-                <input type="text" id="director" placeholder="director" value={director} onChange={e => setDirector(e.target.value)} />
+                <input type="text" id="director" placeholder="Director" value={director} onChange={e => setDirector(e.target.value)} />
                 <input type="text" id="screenwriters" placeholder="Screenwriter 1, Screenwriter 2, etc..." value={screenwriters} onChange={e => setScreenwriters(e.target.value)} />
                 <input type="text" id="producers" placeholder="Producer1, Producer 2, etc..." value={producers} onChange={e => setProducers(e.target.value)} />
                 <input type="text" id="music" placeholder="Music By" value={music} onChange={e => setMusic(e.target.value)} />
