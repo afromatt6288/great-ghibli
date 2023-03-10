@@ -106,8 +106,9 @@ button {
   color: rgb(232, 232, 240);
   padding: 5px;
   border-radius: 5px;
-  font-size: 4vw;
+  font-size: 4vh;
   font-weight: bold;  
+  overflow-wrap: break-word;
 }
 
 .character-detail-intro {
@@ -208,13 +209,14 @@ button {
   left: 0;
   position: absolute;
   width: 60%;
-  height: 120px;
-  overflow-y: hidden;  
-  overflow-x: hidden;
-  max-height: 60vh;
+  /* height: 21vh; */
+  /* overflow-y: hidden;   */
+  /* overflow-x: hidden; */
+  /* max-height: 21vh; */
   color: rgb(250, 252, 252);
   text-shadow: 1px 1px 1px #000000;
   letter-spacing: 2px;
+  padding :0vh;
 }
 
 .detail-header .container {
@@ -226,16 +228,18 @@ button {
 .detail-header .highlight {
   background-color: rgba(19, 76, 223, 0.5);
   color: rgb(232, 232, 240);
-  padding: 5px;
+  padding: 1.1vh;
   border-radius: 5px;
-  font-size: 4vw;
+  font-size: 4vh;
   font-weight: bold;  
+  margin-top: .2vh;
+  margin-bottom: .2vh;
 }
 
 .detail-intro {
   display: inline-block;
   left: 0;
-  margin-top:18%;
+  margin-top:21vh;
   position: absolute;
   width: 60%;
   height: 45%;

@@ -2,33 +2,34 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 function CharacterNew() {
-    const [title, setTitle] = useState("");
-    const [originalTitle, setOriginalTitle] = useState("");
-    const [originalTitleRomanised, setOriginalTitleRomanised] = useState("")
-    const [poster, setPoster] = useState("");
-    const [movieBanner, setMovieBanner] = useState("")
-    const [synopsis, setSynopsis] = useState("");
-    const [genre1, setGenre1] = useState("")
-    const [genre2, setGenre2] = useState("")
-    const [releaseDate, setReleaseDate] = useState("")
+    const [name, setName] = useState("")
+    const [originalCast, setOriginalCast] = useState("");
+    const [lastEnglishDubbingActor, setLastEnglishDubbingActor] = useState("");
+    const [still, setStill] = useState("");
+    const [gender, setGender] = useState("");
+    const [age, setAge] = useState("");
+    const [eyeColor, setEyeColor] = useState("");
+    const [hairColor, setHairColor] = useState("");
+    const [species, setSpecies] = useState("");
     
     const history = useHistory();
     
     function handleSubmit(e) {
-        e.preventDefault()
-        const date = new Date(releaseDate)             
-        const formattedDate = date.toLocaleDateString('en-US', {month: 'long', day: 'numeric', year: 'numeric', })
+        e.preventDefault()        
         const formData = {
-                title: title,
-                original_title: originalTitle,
-                original_title_romanised: originalTitleRomanised,
-                poster: poster,
-                movie_banner: movieBanner,
-                synopsis: synopsis,
-                genres: [genre1, genre2],
-                release_date: formattedDate,
+                name: name,
+                originalCast: originalCast,
+                lastEnglishDubbingActor: lastEnglishDubbingActor,
+                still: still,
+                gender: gender,
+                age: age,
+                eye_color: eyeColor,
+                hair_color: hairColor,
+                species: {
+                    name: species,
+                }
         }
-        fetch("http://localhost:3001/movies", {
+        fetch("http://localhost:3001/characters", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -37,7 +38,7 @@ function CharacterNew() {
         })
             .then(r => r.json())
             .then(data => {
-                history.push(`/movies/${data.id}`)
+                history.push(`/characters/${data.id}`)
             })
     }
     
@@ -46,15 +47,15 @@ function CharacterNew() {
         <section >
             <h3 className="header">Add New Character</h3>
             <form className="new-movie-form" onSubmit={handleSubmit}>
-                <input type="text" id="title" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} />
-                <input type="text" id="originalTitle" placeholder="Original Title" value={originalTitle} onChange={e => setOriginalTitle(e.target.value)} />
-                <input type="text" id="originalTitleRomanised" placeholder="Original Title Romanised" value={originalTitleRomanised} onChange={e => setOriginalTitleRomanised(e.target.value)} />
-                <input type="text" id="genre1" placeholder="First Genre" value={genre1} onChange={e => setGenre1(e.target.value)} />
-                <input type="text" id="genre2" placeholder="Second Genre" value={genre2} onChange={e => setGenre2(e.target.value)} />
-                <input type="text" id="poster" placeholder="Poster URL" value={poster} onChange={e => setPoster(e.target.value)} />
-                <input type="text" id="movieBanner" placeholder="Movie Banner URL" value={movieBanner} onChange={e => setMovieBanner(e.target.value)} />
-                <label>Release Date<input type="date" id="releaseDate" placeholder="Release Date" value={releaseDate} onChange={e => setReleaseDate(e.target.value)} /></label>
-                <textarea id="synopsis" placeholder="Synopsis" value={synopsis} onChange={e => setSynopsis(e.target.value)} />
+                <input type="text" id="name" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
+                <input type="text" id="originalCast" placeholder="Original Cast" value={originalCast} onChange={e => setOriginalCast(e.target.value)} />
+                <input type="text" id="lastEnglishDubbingActor" placeholder="Last English Dubbing Actor" value={lastEnglishDubbingActor} onChange={e => setLastEnglishDubbingActor(e.target.value)} />
+                <input type="text" id="still" placeholder="Title" value={still} onChange={e => setStill(e.target.value)} />
+                <input type="text" id="gender" placeholder="Gender" value={gender} onChange={e => setGender(e.target.value)} />
+                <input type="text" id="age" placeholder="Age" value={age} onChange={e => setAge(e.target.value)} />
+                <input type="text" id="eyeColor" placeholder="Eye Color" value={eyeColor} onChange={e => setEyeColor(e.target.value)} />
+                <input type="text" id="hairColor" placeholder="Hair Color" value={hairColor} onChange={e => setHairColor(e.target.value)} />
+                <input type="text" id="species" placeholder="Species" value={species} onChange={e => setSpecies(e.target.value)} />
                 <br/>
                 <button type="submit">Submit</button>
             </form>
@@ -64,16 +65,21 @@ function CharacterNew() {
 
 export default CharacterNew
 
-// director
-// screenwriters
-// producers
-// music
-// genres
-// rating
-// release_date
-// running_time
-// budgetUSD
-// boxOfficeUSD
-// awards
-// reviews
-// characters
+
+    // make this a pull down menu of films that already exist in the 
+    // then have it auto populate the film.title, film.poster, film.movie_banner
+// const [film, setFilm] = useState({});
+// film: film,
+// <input type="text" id="film" placeholder="Film" value={film} onChange={e => setFilm(e.target.value)} />
+//      film: {
+//         "title": "Castle in the Sky",
+//         "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",
+//         "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
+//       },
+
+// need to push species to the DB
+// 
+// 
+
+
+
