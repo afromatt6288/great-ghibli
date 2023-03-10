@@ -1,6 +1,6 @@
 import React from "react";
 
-function MovieSearch({search, onSearchChange, sortBy, onSortChange, onHandleFilter, filterBy, genres}) {
+function FilmSearch({search, onSearchChange, sortBy, onSortChange, onHandleFilter, filterBy, genres}) {
   
   function handleSortChange(e){
     onSortChange(e.target.value)
@@ -45,4 +45,4 @@ function MovieSearch({search, onSearchChange, sortBy, onSortChange, onHandleFilt
   );
 }
 
-export default MovieSearch;
+export default FilmSearch;

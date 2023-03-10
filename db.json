@@ -1,5 +1,5 @@
 {
-  "movies": [
+  "films": [
     {
       "id": 1,
       "title": "Castle in the Sky",
@@ -640,10 +640,7 @@
       "age": "13",
       "eye_color": "Black",
       "hair_color": "Brown",
-      "species": {
-        "id": 1,
-        "name": "Human"
-      }
+      "species": "Human"
     },
     {
       "id": 2,
@@ -661,10 +658,7 @@
       "age": "",
       "eye_color": "",
       "hair_color": "",
-      "species": {
-        "id": 1,
-        "name": ""
-      }
+      "species": ""
     },
     {
       "id": 3,
@@ -682,10 +676,7 @@
       "age": "",
       "eye_color": "",
       "hair_color": "",
-      "species": {
-        "id": 1,
-        "name": ""
-      }
+      "species": ""
     },
     {
       "id": 4,
@@ -703,10 +694,7 @@
       "age": "",
       "eye_color": "",
       "hair_color": "",
-      "species": {
-        "id": 1,
-        "name": ""
-      }
+      "species": ""
     },
     {
       "id": 5,
@@ -724,10 +712,7 @@
       "age": "",
       "eye_color": "",
       "hair_color": "",
-      "species": {
-        "id": 1,
-        "name": ""
-      }
+      "species": ""
     },
     {
       "id": 6,
@@ -745,10 +730,7 @@
       "age": "",
       "eye_color": "",
       "hair_color": "",
-      "species": {
-        "id": 1,
-        "name": ""
-      }
+      "species": ""
     },
     {
       "id": 7,
@@ -766,10 +748,7 @@
       "age": "",
       "eye_color": "",
       "hair_color": "",
-      "species": {
-        "id": 1,
-        "name": ""
-      }
+      "species": ""
     },
     {
       "id": 8,
@@ -787,10 +766,7 @@
       "age": "",
       "eye_color": "",
       "hair_color": "",
-      "species": {
-        "id": 1,
-        "name": ""
-      }
+      "species": ""
     },
     {
       "id": 9,
@@ -808,10 +784,7 @@
       "age": "",
       "eye_color": "",
       "hair_color": "",
-      "species": {
-        "id": 1,
-        "name": ""
-      }
+      "species": ""
     },
     {
       "id": 10,
@@ -829,10 +802,7 @@
       "age": "",
       "eye_color": "",
       "hair_color": "",
-      "species": {
-        "id": 1,
-        "name": ""
-      }
+      "species": ""
     },
     {
       "id": 11,
@@ -850,10 +820,7 @@
       "age": "",
       "eye_color": "",
       "hair_color": "",
-      "species": {
-        "id": 1,
-        "name": ""
-      }
+      "species": ""
     },
     {
       "id": 12,
@@ -871,10 +838,7 @@
       "age": "",
       "eye_color": "",
       "hair_color": "",
-      "species": {
-        "id": 1,
-        "name": ""
-      }
+      "species": ""
     },
     {
       "id": 13,
@@ -892,10 +856,7 @@
       "age": "",
       "eye_color": "",
       "hair_color": "",
-      "species": {
-        "id": 1,
-        "name": ""
-      }
+      "species": ""
     },
     {
       "id": 14,
@@ -913,14 +874,9 @@
       "age": "",
       "eye_color": "",
       "hair_color": "",
-      "species": {
-        "id": 1,
-        "name": ""
-      }
+      "species": ""
     }
   ],
-
-
   "species": [
     {
       "id": 1,
@@ -972,9 +928,6 @@
       "hair_colors": "White, Green, Gray"
     }
   ],
-
-
-
   "vehicles": [
     {
       "id": 1,
@@ -1013,8 +966,6 @@
       "url": "https://ghibliapi.herokuapp.com/vehicles/923d70c9-8f15-4972-ad53-0128b261d628"
     }
   ],
-
-
   "users": [
     {
       "id": 1,

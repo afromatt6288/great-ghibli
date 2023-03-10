@@ -10,22 +10,37 @@ function CharacterNew() {
     const [age, setAge] = useState("");
     const [eyeColor, setEyeColor] = useState("");
     const [hairColor, setHairColor] = useState("");
-    const [species, setSpecies] = useState("");
 
     //fetching film data for character entry and patching
-    const [movies, setMovies] = useState([]); 
-    const [filterFilmBy, setFilterFilmBy] = useState("All")   
+    const [films, setFilms] = useState([]); 
+    const [filterByFilm, setFilterByFilm] = useState("All")   
     useEffect(() => {
-        fetch("http://localhost:3001/movies")
+        fetch("http://localhost:3001/films")
             .then(r => r.json())
-            .then(data => setMovies(data))
+            .then(data => setFilms(data))
     }, [])
-console.log(movies)
+    
     function handleFilmFilter(e){
         console.log(e.target.value)
-        setFilterFilmBy(e.target.value)
+        setFilterByFilm(e.target.value)
     }
     // End of film data
+
+    //fetching Species data for character entry and patching
+    const [species, setSpecies] = useState([]); 
+    const [filterBySpecies, setFilterBySpecies] = useState("All")   
+    useEffect(() => {
+        fetch("http://localhost:3001/films")
+            .then(r => r.json())
+            .then(data => setSpecies(data))
+    }, [])
+    
+    function handleSpeciesFilter(e){
+        console.log(e.target.value)
+        setFilterBySpecies(e.target.value)
+    }
+    // End of film data
+    
     
     const history = useHistory();
     
@@ -40,8 +55,11 @@ console.log(movies)
                 age: age,
                 eye_color: eyeColor,
                 hair_color: hairColor,
-                species: {
-                    name: species,
+                species: species,
+                film: {
+                    title: "",
+                    poster: "",
+                    movie_banner: ""
                 }
         }
         fetch("http://localhost:3001/characters", {
@@ -61,7 +79,7 @@ console.log(movies)
     return (
         <section >
             <h3 className="header">Add New Character</h3>
-            <form className="new-movie-form" onSubmit={handleSubmit}>
+            <form className="new-film-form" onSubmit={handleSubmit}>
                 <input type="text" id="name" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
                 <input type="text" id="originalCast" placeholder="Original Cast" value={originalCast} onChange={e => setOriginalCast(e.target.value)} />
                 <input type="text" id="lastEnglishDubbingActor" placeholder="Last English Dubbing Actor" value={lastEnglishDubbingActor} onChange={e => setLastEnglishDubbingActor(e.target.value)} />
@@ -71,10 +89,15 @@ console.log(movies)
                 <input type="text" id="eyeColor" placeholder="Eye Color" value={eyeColor} onChange={e => setEyeColor(e.target.value)} />
                 <input type="text" id="hairColor" placeholder="Hair Color" value={hairColor} onChange={e => setHairColor(e.target.value)} />
                 <input type="text" id="species" placeholder="Species" value={species} onChange={e => setSpecies(e.target.value)} />
+                <label htmlFor="species">Species</label>
+                    <select onChange={handleSpeciesFilter} value={filterBySpecies}>
+                        <option value="pleaseSelectFilm">Please Select Species</option>
+                        {species.map((species)=> <option value={species.name}>{species.name}</option>)}
+                    </select>
                 <label htmlFor="film">Film</label>
-                    <select onChange={handleFilmFilter} value={filterFilmBy}>
+                    <select onChange={handleFilmFilter} value={filterByFilm}>
                         <option value="pleaseSelectFilm">Please Select Film</option>
-                        {movies.map((movie)=> <option value={movie.title}>{movie.title}</option>)}
+                        {films.map((film)=> <option value={film.title}>{film.title}</option>)}
                     </select>
                 <br/>
                 <button type="submit">Submit</button>

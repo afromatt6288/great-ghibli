@@ -1,15 +1,16 @@
 import React from "react";
 
-function CharacterSearch({search, onSearchChange, onHandleSpeciesFilter, filterBySpecies, onHandleMovieFilter, filterByMovie, species, films}) {
+function CharacterSearch({search, onSearchChange, onHandleSpeciesFilter, filterBySpecies, onHandleFilmFilter, filterByFilm, species, films}) {
 
   function handleSpeciesFilter(e){
     onHandleSpeciesFilter(e.target.value)
   }
 
-  function handleMoviesFilter(e){
-    onHandleMovieFilter(e.target.value)
+  function handleFilmFilter(e){
+    onHandleFilmFilter(e.target.value)
   }
-
+  
+console.log(species)
   return (
     <div className="ui search">
         <label className="filter">
@@ -20,8 +21,8 @@ function CharacterSearch({search, onSearchChange, onHandleSpeciesFilter, filterB
             </select>
         </label>
         <label className="filter">
-            <strong> Filter by Movie:</strong>
-            <select onChange={handleMoviesFilter} value={filterByMovie}>
+            <strong> Filter by Film:</strong>
+            <select onChange={handleFilmFilter} value={filterByFilm}>
                 <option value="All">All</option>
                 {films.map((film)=> <option value={film.title}>{film.title}</option>)}
             </select>

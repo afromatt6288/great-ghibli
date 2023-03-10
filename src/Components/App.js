@@ -3,9 +3,9 @@ import { Switch, Route } from "react-router-dom";
 import NavBar from "./NavBar"
 import Home from "./Home";
 import About from "./About";
-import MovieList from "./MovieList";
-import MovieDetail from "./MovieDetail";
-import MovieNew from "./MovieNew";
+import FilmList from "./FilmList";
+import FilmDetail from "./FilmDetail";
+import FilmNew from "./FilmNew";
 import CharacterList from "./CharacterList"
 import CharacterDetail from "./CharacterDetail";
 import CharacterNew from "./CharacterNew"
@@ -30,12 +30,12 @@ function App() {
     }, [])
     
     // Gather my Movie Data
-    const [movies, setMovies] = useState([]);
+    const [films, setFilms] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:3001/movies")
+        fetch("http://localhost:3001/films")
             .then(r => r.json())
             .then(data => {
-                setMovies(data)
+                setFilms(data)
             })
     }, [])
 
@@ -101,18 +101,18 @@ function App() {
                 <Route exact path="/about">
                     <About />
                 </Route>
-                <Route exact path="/movies">
-                    <MovieList movies={movies}/>
+                <Route exact path="/films">
+                    <FilmList films={films}/>
                 </Route>
                 {admin ? 
-                <Route exact path="/movies/new">
-                    <MovieNew />
+                <Route exact path="/films/new">
+                    <FilmNew />
                 </Route> : null }
-                <Route exact path="/movies/:id">
-                    <MovieDetail admin={admin}/>
+                <Route exact path="/films/:id">
+                    <FilmDetail admin={admin}/>
                 </Route>
                 <Route exact path="/characters">
-                    <CharacterList films={movies} characters={characters} species={species} vehicles={vehicles}/>
+                    <CharacterList films={films} characters={characters} species={species} vehicles={vehicles}/>
                 </Route>
                 {admin ? 
                 <Route exact path="/characters/new">

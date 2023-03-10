@@ -386,11 +386,11 @@ button {
   padding: 5px;
 }
 
-.movie-item {
+.film-item {
   margin: 1%;
 }
 
-.movie-list {
+.film-list {
   border: 5px groove #6551c0; 
   border-radius: 30px;  
   padding: 20px; 
@@ -405,7 +405,7 @@ button {
   max-height: calc(70vh - 65px);
 }
 
-.movie-character-list {
+.film-character-list {
   border: 5px groove #6551c0; 
   border-radius: 30px;  
   padding: 20px; 
@@ -457,21 +457,21 @@ nav span {
   margin-bottom:-8px;
 }
 
-.new-movie-form {
+.new-film-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-.new-movie-form 
+.new-film-form 
 label {
   display: block;
   margin: 10px;
   width: 300px;
 }
 
-.new-movie-form 
+.new-film-form 
 input[type="text"] {
   width: 30%;
   padding: 10px;
@@ -482,7 +482,7 @@ input[type="text"] {
   font-size: 16px;
 }
 
-.new-movie-form 
+.new-film-form 
 button[type="submit"] {
   background-color: #4CAF50;
   color: rgb(190, 13, 13);
@@ -498,7 +498,7 @@ button[type="submit"] {
   transform: translateX(-50%);
 }
 
-.new-movie-form 
+.new-film-form 
 button[type="submit"]:hover {
   background-color: #0bbb11;
 }

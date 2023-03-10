@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-function MovieNew() {
+function FilmNew() {
     const [title, setTitle] = useState("");
     const [originalTitle, setOriginalTitle] = useState("");
     const [originalTitleRomanised, setOriginalTitleRomanised] = useState("")
@@ -52,7 +52,7 @@ function MovieNew() {
                 },
 
         }
-        fetch("http://localhost:3001/movies", {
+        fetch("http://localhost:3001/films", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -61,27 +61,27 @@ function MovieNew() {
         })
             .then(r => r.json())
             .then(data => {
-                history.push(`/movies/${data.id}`)
+                history.push(`/films/${data.id}`)
             })
     }
     
 
     return (
         <section >
-            <h3 className="header">Add New Movie</h3>
-            <form className="new-movie-form" onSubmit={handleSubmit}>
+            <h3 className="header">Add New Film</h3>
+            <form className="new-film-form" onSubmit={handleSubmit}>
                 <input type="text" id="title" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} />
                 <input type="text" id="originalTitle" placeholder="Original Title" value={originalTitle} onChange={e => setOriginalTitle(e.target.value)} />
                 <input type="text" id="originalTitleRomanised" placeholder="Original Title Romanised" value={originalTitleRomanised} onChange={e => setOriginalTitleRomanised(e.target.value)} />
                 <input type="text" id="genres" placeholder="Genre 1, Genre 2, etc..." value={genres} onChange={e => setGenres(e.target.value)} />
                 <input type="text" id="poster" placeholder="Poster URL" value={poster} onChange={e => setPoster(e.target.value)} />
-                <input type="text" id="movieBanner" placeholder="Movie Banner URL" value={movieBanner} onChange={e => setMovieBanner(e.target.value)} />
+                <input type="text" id="movieBanner" placeholder="Film Banner URL" value={movieBanner} onChange={e => setMovieBanner(e.target.value)} />
                 <input type="text" id="director" placeholder="director" value={director} onChange={e => setDirector(e.target.value)} />
                 <input type="text" id="screenwriters" placeholder="Screenwriter 1, Screenwriter 2, etc..." value={screenwriters} onChange={e => setScreenwriters(e.target.value)} />
                 <input type="text" id="producers" placeholder="Producer1, Producer 2, etc..." value={producers} onChange={e => setProducers(e.target.value)} />
                 <input type="text" id="music" placeholder="Music By" value={music} onChange={e => setMusic(e.target.value)} />
                 <input type="text" id="rating" placeholder="Rating" value={rating} onChange={e => setRating(e.target.value)} />
-                <input type="text" id="runningTime" placeholder="Running Time" value={runningTime} onChange={e => setDirector(e.target.value)} />
+                <input type="text" id="runningTime" placeholder="Running Time" value={runningTime} onChange={e => setRunningTime(e.target.value)} />
                 <input type="text" id="budgetUSD" placeholder="Budget USD" value={budgetUSD} onChange={e => setBudgetUsd(e.target.value)} />
                 <input type="text" id="boxOfficeUSD" placeholder="Box Office USD" value={boxOfficeUSD} onChange={e => setBoxOfficeUSD(e.target.value)} />
                 <input type="text" id="awards" placeholder="Award 1, Award 2, etc..." value={awards} onChange={e => setAward(e.target.value)} />
@@ -96,6 +96,6 @@ function MovieNew() {
     )
 }
 
-export default MovieNew
+export default FilmNew
 
 

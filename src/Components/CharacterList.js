@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import CharacterItem from "./CharacterItem";
 import CharacterSearch from "./CharacterSearch"
 import { Card } from "semantic-ui-react"
@@ -6,12 +6,12 @@ import { Card } from "semantic-ui-react"
 function CharacterList({films, characters, species, vehicles}) {    
     const [search, setSearch] = useState("")
     const [filterBySpecies, setFilterBySpecies] = useState("All")
-    const [filterByMovie, setFilterByMovie] = useState("All")
+    const [filterByFilm, setFilterByFilm] = useState("All")
 
     
 
     // set uniqueSpecies filter    
-    // const species = characters.map((character)=> character.species.name)
+    // const species = characters.map((character)=> character.species)
     // const allSpecies = species.flat(1)
     // const uniqueSpecies = [...new Set(allSpecies)]
    
@@ -22,9 +22,9 @@ function CharacterList({films, characters, species, vehicles}) {
 
     // Handle the dual filter output
     const filteredCharacters = characters.filter((character) => {
-        const matchSpecies = filterBySpecies === "All" || character.species.name === filterBySpecies;
-        const matchMovie = filterByMovie === "All" || character.film.title === filterByMovie;
-        return matchSpecies && matchMovie;
+        const matchSpecies = filterBySpecies === "All" || character.species === filterBySpecies;
+        const matchFilm = filterByFilm === "All" || character.film.title === filterByFilm;
+        return matchSpecies && matchFilm;
       });
 
     // this is how I am handling the CharacterSearch function
@@ -34,7 +34,7 @@ function CharacterList({films, characters, species, vehicles}) {
         <section id="characters">
             <h2 className="header">Ghibli Characters</h2>
             <div className="search-bar">
-                <CharacterSearch search={search} onSearchChange={setSearch} filterBySpecies={filterBySpecies} onHandleSpeciesFilter={setFilterBySpecies} filterByMovie={filterByMovie} onHandleMovieFilter={setFilterByMovie} species={species} films={films}/>
+                <CharacterSearch search={search} onSearchChange={setSearch} filterBySpecies={filterBySpecies} onHandleSpeciesFilter={setFilterBySpecies} filterByFilm={filterByFilm} onHandleFilmFilter={setFilterByFilm} species={species} films={films}/>
             </div>
             <div>
             <div className="character-list">

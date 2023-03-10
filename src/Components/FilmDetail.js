@@ -2,28 +2,28 @@ import React, { useEffect, useState } from "react";
 import { useParams, useHistory, Link } from "react-router-dom"
 import { Card } from "semantic-ui-react"
 
-function MovieDetail({admin}) {
-    const [movie, setMovie] = useState(null);
+function FilmDetail({admin}) {
+    const [film, setFilm] = useState(null);
     const { id } = useParams()
     const history = useHistory()
     
     useEffect(() => {
-        fetch(`http://localhost:3001/movies/${id}`)
+        fetch(`http://localhost:3001/films/${id}`)
             .then(r => r.json())
-            .then(data => setMovie(data))
+            .then(data => setFilm(data))
     }, [id])
     
-    if (!movie) return <h2>Loading...</h2>
+    if (!film) return <h2>Loading...</h2>
     
-    const { title, original_title, original_title_romanised, synopsis, poster, genres, movie_banner, release_date, director, screenwriters, producers, music, rating, running_time, budgetUSD, boxOfficeUSD, awards, reviews, characters} = movie
+    const { title, original_title, original_title_romanised, synopsis, poster, genres, movie_banner, release_date, director, screenwriters, producers, music, rating, running_time, budgetUSD, boxOfficeUSD, awards, reviews, characters} = film
     const [genre1, genre2] = genres
     const {rottenTomatoes, imdb} = reviews
     
     function handleDeleteClick() {
-        fetch(`http://localhost:3001/movies/${id}`, {
+        fetch(`http://localhost:3001/films/${id}`, {
           method: "DELETE"
         }) 
-        history.push(`/movies`)       
+        history.push(`/films`)       
     }
     
     return (
@@ -55,7 +55,7 @@ function MovieDetail({admin}) {
                 </span>
                 <h3>Reviews: rottenTomatoes: {rottenTomatoes} / imdb: {imdb}</h3>
                 <h2>Characters:</h2>
-                <div className="movie-character-list">
+                <div className="film-character-list">
                     <Card.Group className="cards" itemsPerRow={2}>
                         {characters.map((character)=> (
                         <div>
@@ -98,4 +98,4 @@ function MovieDetail({admin}) {
     );
 }
 
-export default MovieDetail;
+export default FilmDetail;

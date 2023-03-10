@@ -29,7 +29,7 @@ function CharacterDetail({admin}) {
             <header className="character-detail-header">
                 <div className="container">
                     <span className="highlight">{name}</span>
-                    <img className="character-img" src={still}/>
+                    <img className="character-img" src={still} alt={name}/>
                 </div>
             </header>
             <div className="character-detail-intro">
@@ -41,7 +41,7 @@ function CharacterDetail({admin}) {
                     <label>Gender: <p>{gender}</p></label>
                     <label>Eye Color:<p>{eye_color}</p></label>
                 </span>
-                <label>Species: <p>{species.name}</p></label>
+                <label>Species: <p>{species}</p></label>
                 <span>
                     <label>Original Cast:<p>{originalCast}</p></label> 
                     <label>Last English Dubbing Actor:<p>{lastEnglishDubbingActor}</p></label>
@@ -49,7 +49,7 @@ function CharacterDetail({admin}) {
                 <h2>Movie:</h2>
                 <div>
                     <h4>{title}</h4>
-                    <Link to={`/movies/${film.id}`}>
+                    <Link to={`/films/${film.id}`}>
                         <img className="img-thumb" src={poster} alt={title} />
                     </Link>  
                 </div>                

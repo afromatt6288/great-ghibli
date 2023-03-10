@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function MovieItem({ movie }) {
-    const { id, title, poster, release_date, genres} = movie
+function FilmItem({ film }) {
+    const { id, title, poster, release_date, genres} = film
     const [genre1, genre2] = genres
 
     return (
-        <div className="movie-item">
-            <Link to={`/movies/${id}`}>
+        <div className="film-item">
+            <Link to={`/films/${id}`}>
                 <img className="img-thumb" src={poster} alt={title} />
             </Link>
             <p>{genre1}/{genre2}</p>
@@ -16,4 +16,4 @@ function MovieItem({ movie }) {
     );
 }
 
-export default MovieItem;
+export default FilmItem;
