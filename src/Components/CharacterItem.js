@@ -9,7 +9,7 @@ function CharacterItem({ character }) {
         <div className="character-item">
             <p>{name}</p>
             <Link to={`/characters/${id}`}>
-                <img className="img-thumb" src={still} alt={name} onerror="this.onerror=null;this.src='https://image.shutterstock.com/image-vector/blank-avatar-photo-place-holder-260nw-1114445501.jpg';" />
+                <img className="img-thumb" src={still} alt={name} onError="this.onerror=null;this.src='https://image.shutterstock.com/image-vector/blank-avatar-photo-place-holder-260nw-1114445501.jpg';" />
             </Link>
             <p>{species}</p>
             <p>{film.title}</p>

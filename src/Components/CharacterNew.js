@@ -13,33 +13,39 @@ function CharacterNew() {
 
     //fetching film data for character entry and patching
     const [films, setFilms] = useState([]); 
-    const [filterByFilm, setFilterByFilm] = useState("All")   
+    const [filmTitle, setFilmTitle] = useState("Please Select Film")   
+    const [filmPoster, setFilmPoster] = useState("")
+    const [filmMovieBanner, setFilmMovieBanner] = useState("")
+    
     useEffect(() => {
         fetch("http://localhost:3001/films")
             .then(r => r.json())
             .then(data => setFilms(data))
-    }, [])
-    
-    function handleFilmFilter(e){
-        console.log(e.target.value)
-        setFilterByFilm(e.target.value)
-    }
-    // End of film data
+    }, [])  
+
+    function handleFilmFilter(e) {
+        const title = e.target.value
+        setFilmTitle(title);
+        const poster = films.find((film) => e.target.value === film.title).poster
+        setFilmPoster(poster);
+        const banner = films.find((film) => e.target.value === film.title).movie_banner
+        setFilmMovieBanner(banner);
+      }
+    // End of Film data
 
     //fetching Species data for character entry and patching
     const [species, setSpecies] = useState([]); 
-    const [filterBySpecies, setFilterBySpecies] = useState("All")   
+    const [speciesName, setSpeciesName] = useState("Please Select Species")   
     useEffect(() => {
-        fetch("http://localhost:3001/films")
+        fetch("http://localhost:3001/species")
             .then(r => r.json())
             .then(data => setSpecies(data))
     }, [])
     
     function handleSpeciesFilter(e){
-        console.log(e.target.value)
-        setFilterBySpecies(e.target.value)
+        setSpeciesName(e.target.value)
     }
-    // End of film data
+    // End of Species data
     
     
     const history = useHistory();
@@ -57,9 +63,9 @@ function CharacterNew() {
                 hair_color: hairColor,
                 species: species,
                 film: {
-                    title: "",
-                    poster: "",
-                    movie_banner: ""
+                    title: filmTitle,
+                    poster: filmPoster,
+                    movie_banner: filmMovieBanner
                 }
         }
         fetch("http://localhost:3001/characters", {
@@ -88,17 +94,19 @@ function CharacterNew() {
                 <input type="text" id="age" placeholder="Age" value={age} onChange={e => setAge(e.target.value)} />
                 <input type="text" id="eyeColor" placeholder="Eye Color" value={eyeColor} onChange={e => setEyeColor(e.target.value)} />
                 <input type="text" id="hairColor" placeholder="Hair Color" value={hairColor} onChange={e => setHairColor(e.target.value)} />
-                <input type="text" id="species" placeholder="Species" value={species} onChange={e => setSpecies(e.target.value)} />
-                <label htmlFor="species">Species</label>
-                    <select onChange={handleSpeciesFilter} value={filterBySpecies}>
-                        <option value="pleaseSelectFilm">Please Select Species</option>
-                        {species.map((species)=> <option value={species.name}>{species.name}</option>)}
+                    <select onChange={handleSpeciesFilter} value={speciesName}>
+                        <option value="pleaseSelectSpecies">Please Select Species</option>
+                        {species.map((specie)=> <option value={specie.name}>{specie.name}</option>)}
                     </select>
-                <label htmlFor="film">Film</label>
-                    <select onChange={handleFilmFilter} value={filterByFilm}>
+                <div>
+                    <select onChange={handleFilmFilter} value={filmTitle}>
                         <option value="pleaseSelectFilm">Please Select Film</option>
                         {films.map((film)=> <option value={film.title}>{film.title}</option>)}
                     </select>
+                <input type="text" id="poster" placeholder="Film Poster ULR" value={filmPoster} readOnly={true}/>
+                <input type="text" id="movie_banner" placeholder="Film Movie Banner" value={filmMovieBanner} readOnly={true}/>                
+                
+                </div>
                 <br/>
                 <button type="submit">Submit</button>
             </form>

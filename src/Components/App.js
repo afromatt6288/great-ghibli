@@ -116,7 +116,7 @@ function App() {
                 </Route>
                 {admin ? 
                 <Route exact path="/characters/new">
-                    <CharacterNew />
+                    <CharacterNew key={""}/>
                 </Route> : null }
                 <Route exact path="/characters/:id">
                     <CharacterDetail admin={admin}/>

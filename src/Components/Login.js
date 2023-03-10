@@ -33,7 +33,7 @@ function Login ({toggle, loggedIn, onLoggedIn, admin, onAdmin, currentUser, onCu
         <div className="modal">
             <div className="modal_content">
                 {loggedIn ? 
-                <div>
+                <div className="admin">
                     <h4>{currentUser.username}</h4>
                     <label> Admin </label>
                     <input label="Admin" type="checkbox" readOnly checked={admin} />
@@ -42,15 +42,16 @@ function Login ({toggle, loggedIn, onLoggedIn, admin, onAdmin, currentUser, onCu
                 <form onSubmit={handleSubmit}>
                     <input type="text" id="userName" placeholder="User Name" value={userName} onChange={e => setUserName(e.target.value) }/>
                     <input type={isPasswordSecure? "password" : "text"} id="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)}/>
-                    <span className="show-button"><input label="show-password" type="checkbox" checked={!isPasswordSecure} onChange={(e)=>setIsPasswordSecure(!isPasswordSecure)}/> Show</span>
+                    <span className="show-password-button"><input label="show-password" type="checkbox" checked={!isPasswordSecure} onChange={(e)=>setIsPasswordSecure(!isPasswordSecure)}/> Show</span>
                     <br/>
                     <button type="submit">Login</button>
                 <   br/>
                     {invalidUser ? <small>Invalid User</small> : null}
+                    <button className="new-user-button" onClick={e=>setNewUser(!newUser)}>New User? Sign up here!</button> 
                 </form>}
                 {loggedIn ? 
                 <button className="login-button" onClick={(e)=> onLoggedIn(!loggedIn)} >Log Out</button>
-                : <button className="new-user-button" onClick={e=>setNewUser(!newUser)}>New User? Sign up here!</button> }
+                : null}
             </div>
         </div>
     );

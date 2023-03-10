@@ -13,18 +13,27 @@
   transition: 0.1s;
 } */
 
-/* .admin:hover,
-.admin:active {
-  color: tomato;
-  border: 2px solid tomato;
-} */
-
 .actions {
   position: absolute;
   top: 12rem;
   transform: translateY(-50%);
   right: 12rem;
   /* display: none; */
+}
+
+/* .admin:hover,
+.admin:active {
+  color: tomato;
+  border: 2px solid tomato;
+} */
+
+.admin h4 {
+  display: block;
+  padding: -5px;
+  /* margin: -20; */
+  /* position:absolute; */
+  margin-bottom:2px;
+  /* top :0; */
 }
 
 .App {
@@ -313,6 +322,40 @@ button {
   /* padding: 5px;  */
 }
 
+.film-item {
+  margin: 1%;
+}
+
+.film-list {
+  border: 5px groove #7010ac; 
+  border-radius: 30px;  
+  padding: 20px; 
+  /* width: flex; */
+  overflow-y: hidden;
+  overflow-y: scroll;
+  /* height: 5%; */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+  /* overflow: auto; */
+  max-height: calc(70vh - 65px);
+}
+
+.film-character-list {
+  border: 5px groove #7010ac; 
+  border-radius: 30px;  
+  padding: 20px; 
+  /* width: flex; */
+  /* overflow-y: hidden; */
+  /* overflow-y: scroll; */
+  /* height: 5%; */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+  /* overflow: auto; */
+  /* max-height: calc(70vh - 65px); */
+}
+
 .header {  
   display: inline-block;
   text-align: center;
@@ -346,8 +389,8 @@ button {
   text-decoration: none;
   border-radius: 15px;
   font-size: 1.5em;
-  color: firebrick;
-  border: 2px solid firebrick;
+  color: #7010ac;
+  border: 2px solid #7010ac;
   transition: 0.1s;
 }
 
@@ -382,42 +425,9 @@ button {
   top: 15.5%;
   left: 91%;
   transform: translate(-50%, -50%);
-  background-color: #18a848;
+  background-color: #d0c5d66e;
   padding: 5px;
-}
-
-.film-item {
-  margin: 1%;
-}
-
-.film-list {
-  border: 5px groove #6551c0; 
-  border-radius: 30px;  
-  padding: 20px; 
-  /* width: flex; */
-  overflow-y: hidden;
-  overflow-y: scroll;
-  /* height: 5%; */
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* justify-content: space-between; */
-  /* overflow: auto; */
-  max-height: calc(70vh - 65px);
-}
-
-.film-character-list {
-  border: 5px groove #6551c0; 
-  border-radius: 30px;  
-  padding: 20px; 
-  /* width: flex; */
-  /* overflow-y: hidden; */
-  /* overflow-y: scroll; */
-  /* height: 5%; */
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* justify-content: space-between; */
-  /* overflow: auto; */
-  /* max-height: calc(70vh - 65px); */
+  z-index: 9999;
 }
 
 nav {
@@ -430,9 +440,9 @@ nav a {
   padding: 0.5rem;
   text-decoration: none;
   font-size: 1.2em;
-  color: firebrick;
-  border-bottom: 2px solid firebrick;  
-  transition: 1s;
+  color: #7010ac;
+  border-bottom: 2px solid #7010ac;  
+  transition: .5s;
 }
 
 nav a:hover,
@@ -451,7 +461,7 @@ nav span {
   padding: 0.5rem;
   /* text-decoration: none; */
   font-size: 1.1em;
-  color: rgb(48, 34, 178);
+  color: rgb(24, 8, 241);
   transition: 1s;
   margin-top:-15px;
   margin-bottom:-8px;
@@ -530,13 +540,13 @@ button[type="submit"]:hover {
     /* padding: 0.25rem; */
     /* text-decoration: none; */
     /* font-size: 1.2em; */
-    color: firebrick;
+    color: #7010ac;
     /* border-bottom: 2px solid firebrick; */
     transition: 0.1s;
     width: 100%;
 }
 
-.show-button {  
+.show-password-button {  
   position: absolute;
   color:#7010ac;
   top: 28px;
@@ -545,18 +555,64 @@ button[type="submit"]:hover {
   display: flex
 }
 
+.species-detail-intro {
+  display: inline-block;
+  left: 0;
+  position: relative;
+  width: 100%;
+  height: 45%;
+  overflow-y: scroll;  
+  overflow-x: hidden;
+  max-height: 60vh;
+  color: rgb(250, 252, 252);
+  text-shadow: 1px 1px 1px #000000;
+  letter-spacing: 2px;
+}
+
+.species-detail-intro span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.species-detail-intro label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: calc(25% - 20px);
+  margin: 5px;
+  padding: 5px;
+  /* background-color: rgba(66, 18, 68, 0.5); */
+  background-color: #7010ac79;
+}
+
+.species-detail-intro p {
+  margin: 0;
+  font-weight: bold;
+}
+
 .user-signup {
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #18a848;
+  background-color: #d0c5d66e;
   padding: 5px;
   text-align: center;
 }
 
 .users {
-  display: flex;
+  display: inline-block;
+  border-radius: 15px;
+  font-size: 12px;
+  color: rgb(233, 231, 238);
+  border: 3px solid #7010ac;
+  padding:5px;
+  margin:5px;
+  background-color: #7010ac79;
 }
 
 body {
