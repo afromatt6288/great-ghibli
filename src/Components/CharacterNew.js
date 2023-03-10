@@ -72,7 +72,6 @@ console.log(movies)
                 <input type="text" id="hairColor" placeholder="Hair Color" value={hairColor} onChange={e => setHairColor(e.target.value)} />
                 <input type="text" id="species" placeholder="Species" value={species} onChange={e => setSpecies(e.target.value)} />
                 <label htmlFor="film">Film</label>
-                    {/* <select id="film" value={movie} onChange={setMovie}> */}
                     <select onChange={handleFilmFilter} value={filterFilmBy}>
                         <option value="pleaseSelectFilm">Please Select Film</option>
                         {movies.map((movie)=> <option value={movie.title}>{movie.title}</option>)}

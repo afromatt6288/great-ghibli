@@ -17,14 +17,57 @@ function App() {
     const [loggedIn, setLoggedIn] = useState(false)
     const [seen, setSeen] = useState(false)
     const [currentUser, setCurrentUser] = useState([])  
-    const [users, setUsers] = useState([]) 
     const admin = currentUser.admin
-
+    
+    // gather my User Data
+    const [users, setUsers] = useState([]) 
     useEffect(() => {
         fetch("http://localhost:3001/users")
-        .then(r => r.json())
-        .then(data => setUsers(data))
+            .then(r => r.json())
+            .then(data => {
+                setUsers(data)
+            })
     }, [])
+    
+    // Gather my Movie Data
+    const [movies, setMovies] = useState([]);
+    useEffect(() => {
+        fetch("http://localhost:3001/movies")
+            .then(r => r.json())
+            .then(data => {
+                setMovies(data)
+            })
+    }, [])
+
+    // Gather my Character Data
+    const [characters, setCharacters] = useState([]);    
+    useEffect(() => {
+        fetch("http://localhost:3001/characters")
+            .then(r => r.json())
+            .then(data => {
+                setCharacters(data)     
+            })
+    }, [])
+
+    // Gather my Species Data
+    const [species, setSpecies] = useState([]);
+    useEffect(() => {
+        fetch("http://localhost:3001/species")
+            .then(r => r.json())
+            .then(data => {
+                setSpecies(data)     
+            })
+        }, [])
+    
+    // Gather my Vehicles Data
+    const [vehicles, setVehicles] = useState([]);
+    useEffect(() => {
+        fetch("http://localhost:3001/vehicles")
+            .then(r => r.json())
+            .then(data => {
+                setVehicles(data)     
+            })
+        }, [])
 
     function handleAddUser(addUser) {
         const updatedUsers = [...users, addUser]
@@ -59,7 +102,7 @@ function App() {
                     <About />
                 </Route>
                 <Route exact path="/movies">
-                    <MovieList />
+                    <MovieList movies={movies}/>
                 </Route>
                 {admin ? 
                 <Route exact path="/movies/new">
@@ -69,7 +112,7 @@ function App() {
                     <MovieDetail admin={admin}/>
                 </Route>
                 <Route exact path="/characters">
-                    <CharacterList />
+                    <CharacterList films={movies} characters={characters} species={species} vehicles={vehicles}/>
                 </Route>
                 {admin ? 
                 <Route exact path="/characters/new">

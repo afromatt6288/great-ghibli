@@ -16,14 +16,14 @@ function CharacterSearch({search, onSearchChange, onHandleSpeciesFilter, filterB
             <strong> Filter by Species:</strong>
             <select onChange={handleSpeciesFilter} value={filterBySpecies}>
                 <option value="All">All</option>
-                {species.map((species)=> <option value={species}>{species}</option>)}
+                {species.map((species)=> <option value={species.name}>{species.name}</option>)}
             </select>
         </label>
         <label className="filter">
             <strong> Filter by Movie:</strong>
             <select onChange={handleMoviesFilter} value={filterByMovie}>
                 <option value="All">All</option>
-                {films.map((film)=> <option value={film}>{film}</option>)}
+                {films.map((film)=> <option value={film.title}>{film.title}</option>)}
             </select>
         </label>
       <div className="ui icon input">

@@ -3,19 +3,12 @@ import MovieItem from "./MovieItem";
 import MovieSearch from "./MovieSearch"
 import { Card } from "semantic-ui-react"
 
-function MovieList() {
-    const [movies, setMovies] = useState([]);
+function MovieList({movies}) {
     const [search, setSearch] = useState("")
     const [sortBy, setSortBy] = useState("Alphabetical")
     const [filterBy, setFilterBy] = useState("All")
-    
-    useEffect(() => {
-        fetch("http://localhost:3001/movies")
-            .then(r => r.json())
-            .then(data => setMovies(data))
-    }, [])
 
-    // handle my sort
+    // handle my Movie sort
     const sortedMovies = [...movies].sort((movie1, movie2) => {
         if (sortBy === "Alphabetical") {
             return movie1.title.localeCompare(movie2.title)
@@ -27,7 +20,7 @@ function MovieList() {
         return console.log('error on sort')
     })
 
-    // handle my filter    
+    // handle my Genre filter    
     const genres = movies.map((movie)=> movie.genres)
     const allGenres = genres.flat(1)
     const uniqueGenres = [...new Set(allGenres)]
