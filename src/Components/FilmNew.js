@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-function FilmNew() {
+function FilmNew({onFilmAdd}) {
     const [title, setTitle] = useState("");
     const [originalTitle, setOriginalTitle] = useState("");
     const [originalTitleRomanised, setOriginalTitleRomanised] = useState("")
     const [poster, setPoster] = useState("");
     const [movieBanner, setMovieBanner] = useState("")
     const [synopsis, setSynopsis] = useState("");
-    const [genres, setGenres] = useState([])
+    const [genre1, setGenre1] = useState("")
+    const [genre2, setGenre2] = useState("")
     const [releaseDate, setReleaseDate] = useState("")
     const [director, setDirector] = useState("");
     const [music, setMusic] = useState("");
@@ -42,7 +43,7 @@ function FilmNew() {
                 running_time: runningTime,
                 budgetUSD: budgetUSD,
                 boxOfficeUSD: boxOfficeUSD,
-                genres: [genres],
+                genres: [genre1, genre2],
                 screenwriters: [screenwriters],
                 producers: [producers],
                 awards: [awards],
@@ -50,17 +51,10 @@ function FilmNew() {
                     rottenTomatoes: rottenTomatoes,
                     imdb: imdb
                 },
-                characters: [
-                        {
-                          name: "",
-                          originalCast: "",
-                          lastEnglishDubbingActor: "",
-                          still: ""
-                        }
-                      ],
-                species: [""],
-                locations: [""],
-                vehicles: [""]
+                characters: [],
+                species: [],
+                locations: [],
+                vehicles: []
         }
         fetch("http://localhost:3001/films", {
             method: "POST",
@@ -71,6 +65,7 @@ function FilmNew() {
         })
             .then(r => r.json())
             .then(data => {
+                onFilmAdd(data)
                 history.push(`/films/${data.id}`)
             })
     }
@@ -83,7 +78,8 @@ function FilmNew() {
                 <input type="text" id="title" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} />
                 <input type="text" id="originalTitle" placeholder="Original Title" value={originalTitle} onChange={e => setOriginalTitle(e.target.value)} />
                 <input type="text" id="originalTitleRomanised" placeholder="Original Title Romanised" value={originalTitleRomanised} onChange={e => setOriginalTitleRomanised(e.target.value)} />
-                <input type="text" id="genres" placeholder="Genre 1, Genre 2, etc..." value={genres} onChange={e => setGenres(e.target.value)} />
+                <input type="text" id="genre1" placeholder="Genre 1" value={genre1} onChange={e => setGenre1(e.target.value)} />
+                <input type="text" id="genre2" placeholder="Genre 1" value={genre2} onChange={e => setGenre2(e.target.value)} />
                 <input type="text" id="poster" placeholder="Poster URL" value={poster} onChange={e => setPoster(e.target.value)} />
                 <input type="text" id="movieBanner" placeholder="Film Banner URL" value={movieBanner} onChange={e => setMovieBanner(e.target.value)} />
                 <input type="text" id="director" placeholder="Director" value={director} onChange={e => setDirector(e.target.value)} />

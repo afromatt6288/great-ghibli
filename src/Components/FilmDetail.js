@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useHistory, Link } from "react-router-dom"
 import { Card } from "semantic-ui-react"
 
-function FilmDetail({admin}) {
+function FilmDetail({admin, onFilmDelete}) {
     const [film, setFilm] = useState(null);
     const { id } = useParams()
     const history = useHistory()
@@ -23,6 +23,7 @@ function FilmDetail({admin}) {
         fetch(`http://localhost:3001/films/${id}`, {
           method: "DELETE"
         }) 
+        onFilmDelete(id)
         history.push(`/films`)       
     }
     
@@ -70,8 +71,8 @@ function FilmDetail({admin}) {
                 <h2>Awards:</h2>
                 <div>{awards}</div>
                 <span>
-                    <label>Budget USD: <p>{budgetUSD}</p></label> 
-                    <label>Box Office USD: <p>{boxOfficeUSD}</p></label>
+                    <label>Budget USD: <p>${budgetUSD}</p></label> 
+                    <label>Box Office USD: <p>${boxOfficeUSD}</p></label>
                 </span>
             </div>
             <div className="detail-image-container">

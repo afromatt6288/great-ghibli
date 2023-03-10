@@ -28,8 +28,8 @@ function App() {
                 setUsers(data)
             })
     }, [])
-    
-    // Gather my Movie Data
+        
+    // Gather my Film Data
     const [films, setFilms] = useState([]);
     useEffect(() => {
         fetch("http://localhost:3001/films")
@@ -69,6 +69,7 @@ function App() {
             })
         }, [])
 
+    // Handle User Add & Delete
     function handleAddUser(addUser) {
         const updatedUsers = [...users, addUser]
         setUsers(updatedUsers);
@@ -79,6 +80,18 @@ function App() {
         setUsers(updatedUsers)
     }
 
+    // Handle Film Add & Delete
+    function handleFilmAdd(addFilm) {
+        const updatedFilms = [...films, addFilm]
+        setFilms(updatedFilms);
+    }
+
+    function handleFilmDelete(id) {
+        const updatedFilms = films.filter(film => film.id !== id)
+        setFilms(updatedFilms)
+    }
+
+    // Handle Login and registration Pop-up
     function togglePop () {
         setSeen(!seen);
     };
@@ -106,10 +119,10 @@ function App() {
                 </Route>
                 {admin ? 
                 <Route exact path="/films/new">
-                    <FilmNew />
+                    <FilmNew onFilmAdd={handleFilmAdd}/>
                 </Route> : null }
                 <Route exact path="/films/:id">
-                    <FilmDetail admin={admin}/>
+                    <FilmDetail admin={admin} onFilmDelete={handleFilmDelete}/>
                 </Route>
                 <Route exact path="/characters">
                     <CharacterList films={films} characters={characters} species={species} vehicles={vehicles}/>

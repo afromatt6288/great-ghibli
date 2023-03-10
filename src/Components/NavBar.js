@@ -12,7 +12,7 @@ function NavBar({admin}) {
             <NavLink exact to="/merch">Merch</NavLink>         
         </nav>
         {admin ?  
-        <nav>
+        <nav className="admin">
             <span>ADMIN : 
             <NavLink exact to="/films/new">Add Film</NavLink> 
             <NavLink exact to="/characters/new">Add Character</NavLink> 

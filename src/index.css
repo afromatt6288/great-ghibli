@@ -1,3 +1,15 @@
+.about {
+  color:#7010ac;
+}
+
+.actions {
+  position: absolute;
+  top: 12rem;
+  transform: translateY(-50%);
+  right: 12rem;
+  /* display: none; */
+}
+
 /* .admin {
   float: right;
   position: absolute;
@@ -12,14 +24,6 @@
   border: 2px solid firebrick;
   transition: 0.1s;
 } */
-
-.actions {
-  position: absolute;
-  top: 12rem;
-  transform: translateY(-50%);
-  right: 12rem;
-  /* display: none; */
-}
 
 /* .admin:hover,
 .admin:active {
@@ -365,6 +369,10 @@ button {
   color: white;
 }
 
+.home {
+  color:#7010ac;
+}
+
 .img-thumb {
   border: 1px solid #ddd; /* Gray border */
   border-radius: 10px;  /* Rounded border */
@@ -389,15 +397,16 @@ button {
   text-decoration: none;
   border-radius: 15px;
   font-size: 1.5em;
-  color: #7010ac;
-  border: 2px solid #7010ac;
+  color: #8d98ac;
+  border: 2px solid #8d98ac;
+  background-color: white;
   transition: 0.1s;
 }
 
 .login:hover,
 .login:active {
-  color: tomato;
-  border: 2px solid tomato;
+  color: #7010ac;
+  border: 2px solid #7010ac;
 }
 
 .merch-links {
@@ -454,6 +463,17 @@ nav a:active {
 nav a.active {
   color: white;
   background: tomato;
+}
+
+nav .admin {
+  display: inline-block;
+  margin: .2rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #7010ac;
+  border-bottom: 2px solid #7010ac;  
+  transition: .5s;
 }
 
 nav span {

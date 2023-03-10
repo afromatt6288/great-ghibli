@@ -54,6 +54,11 @@ function CharacterNew() {
         e.preventDefault()        
         const formData = {
                 name: name,
+                film: {
+                    title: filmTitle,
+                    poster: filmPoster,
+                    movie_banner: filmMovieBanner
+                },
                 originalCast: originalCast,
                 lastEnglishDubbingActor: lastEnglishDubbingActor,
                 still: still,
@@ -62,12 +67,8 @@ function CharacterNew() {
                 eye_color: eyeColor,
                 hair_color: hairColor,
                 species: species,
-                film: {
-                    title: filmTitle,
-                    poster: filmPoster,
-                    movie_banner: filmMovieBanner
-                }
-        }
+                vehicle: []
+            }
         fetch("http://localhost:3001/characters", {
             method: "POST",
             headers: {
@@ -89,7 +90,7 @@ function CharacterNew() {
                 <input type="text" id="name" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
                 <input type="text" id="originalCast" placeholder="Original Cast" value={originalCast} onChange={e => setOriginalCast(e.target.value)} />
                 <input type="text" id="lastEnglishDubbingActor" placeholder="Last English Dubbing Actor" value={lastEnglishDubbingActor} onChange={e => setLastEnglishDubbingActor(e.target.value)} />
-                <input type="text" id="still" placeholder="Title" value={still} onChange={e => setStill(e.target.value)} />
+                <input type="text" id="still" placeholder="Still Image" value={still} onChange={e => setStill(e.target.value)} />
                 <input type="text" id="gender" placeholder="Gender" value={gender} onChange={e => setGender(e.target.value)} />
                 <input type="text" id="age" placeholder="Age" value={age} onChange={e => setAge(e.target.value)} />
                 <input type="text" id="eyeColor" placeholder="Eye Color" value={eyeColor} onChange={e => setEyeColor(e.target.value)} />
@@ -116,18 +117,7 @@ function CharacterNew() {
 
 export default CharacterNew
 
-
-    // make this a pull down menu of films that already exist in the 
-    // then have it auto populate the film.title, film.poster, film.movie_banner
-// const [film, setFilm] = useState({});
-// film: film,
-// <input type="text" id="film" placeholder="Film" value={film} onChange={e => setFilm(e.target.value)} />
-//      film: {
-//         "title": "Castle in the Sky",
-//         "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg",
-//         "movie_banner": "https://image.tmdb.org/t/p/w533_and_h300_bestv2/3cyjYtLWCBE1uvWINHFsFnE8LUK.jpg"
-//       },
-
+// need too be able to have the new character patch into the films as well...
 // need to push species to the DB
 // 
 // 
