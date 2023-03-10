@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 function CharacterNew() {
@@ -11,6 +11,21 @@ function CharacterNew() {
     const [eyeColor, setEyeColor] = useState("");
     const [hairColor, setHairColor] = useState("");
     const [species, setSpecies] = useState("");
+
+    //fetching film data for character entry and patching
+    const [movies, setMovies] = useState([]); 
+    const [filterFilmBy, setFilterFilmBy] = useState("All")   
+    useEffect(() => {
+        fetch("http://localhost:3001/movies")
+            .then(r => r.json())
+            .then(data => setMovies(data))
+    }, [])
+console.log(movies)
+    function handleFilmFilter(e){
+        console.log(e.target.value)
+        setFilterFilmBy(e.target.value)
+    }
+    // End of film data
     
     const history = useHistory();
     
@@ -56,6 +71,12 @@ function CharacterNew() {
                 <input type="text" id="eyeColor" placeholder="Eye Color" value={eyeColor} onChange={e => setEyeColor(e.target.value)} />
                 <input type="text" id="hairColor" placeholder="Hair Color" value={hairColor} onChange={e => setHairColor(e.target.value)} />
                 <input type="text" id="species" placeholder="Species" value={species} onChange={e => setSpecies(e.target.value)} />
+                <label htmlFor="film">Film</label>
+                    {/* <select id="film" value={movie} onChange={setMovie}> */}
+                    <select onChange={handleFilmFilter} value={filterFilmBy}>
+                        <option value="pleaseSelectFilm">Please Select Film</option>
+                        {movies.map((movie)=> <option value={movie.title}>{movie.title}</option>)}
+                    </select>
                 <br/>
                 <button type="submit">Submit</button>
             </form>
@@ -80,6 +101,9 @@ export default CharacterNew
 // need to push species to the DB
 // 
 // 
+
+
+
 
 
 
