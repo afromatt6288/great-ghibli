@@ -3063,6 +3063,43 @@
       "locations": [],
       "vehicles": [],
       "id": 25
+    },
+    {
+      "title": "Nausicaa of the Valley of the Wind",
+      "original_title": "風の谷のナウシカ",
+      "original_title_romanised": "Kaze no Tani no Naushika",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTI3NmJmYTQtNDg4NS00M2VlLTgzZDAtZWIwZDcyOWY5YzIzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+      "movie_banner": "https://images.amcnetworks.com/ifccenter.com/wp-content/uploads/2019/12/nausicaa_01_nvw1012945.jpg",
+      "synopsis": "Stuff and things",
+      "director": "Hayao Miyazaki",
+      "release_date": "March 13, 1984",
+      "music": "Joe Hisaishi",
+      "rating": "PG",
+      "running_time": "117",
+      "budgetUSD": "758,000",
+      "boxOfficeUSD": "14,300,000",
+      "genres": [
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "screenwriters": [
+        "Hayao Miyazaki"
+      ],
+      "producers": [
+        "Isao Takahata"
+      ],
+      "awards": [
+        "Fantafestival Best Short Film, Faro Island Film Festival Golden Train Award, Kineards Readers' Choice Award, Maima Junpo Awnichi Film Concours Ofuji Noburo Award"
+      ],
+      "reviews": {
+        "rottenTomatoes": "89%",
+        "imdb": "8.0/10"
+      },
+      "characters": [],
+      "species": [],
+      "locations": [],
+      "vehicles": [],
+      "id": 26
     }
   ],
   "characters": [
@@ -4496,10 +4533,10 @@
       "id": 4
     },
     {
-      "username": "Jill",
-      "password": "Jill",
+      "username": "Jax",
+      "password": "Jax",
       "admin": false,
-      "id": 6
+      "id": 7
     }
   ]
 }
